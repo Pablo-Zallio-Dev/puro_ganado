@@ -1,0 +1,249 @@
+/* Eliminar al acabar */
+:root {
+  /* FONTS */
+  --font-roboto: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-open: "open-sans", "Segoe UI", Tahoma, Geneva, sans-serif;
+  --font-georgia: "georgia", Georgia, "Times New Roman", Times, serif;
+
+  /* COLORS */
+
+  /* brands colors */
+  
+  --brand-primary: #d84949;
+  --brand-black: #1b1c1e;
+
+  /* primary */
+  --primary-white: #fff;
+  --primary-bloodred: #8c1636;
+
+  /* secondary */
+  --secondary-darkblue: #000626;
+  --secondary-ocre: #b67837;
+  --secondary-beige: #fcfcfc;
+  --secondary-greysky: #999ba8;
+  --secondary-blackclear: #030408b0;
+  --secondary-green: #25D366;
+  --secondary_greyline: #0011661A;
+
+
+  /* accent */
+  --accent-golden: #f1b371;
+  --accent-rosewood: #9a7678;
+}
+
+h1 {
+  font-family: var(--font-roboto);
+  color: var(--accent-rosewood);
+}
+
+.display--none {
+  display: none;
+}
+
+.display--block {
+  display: block;
+}
+
+/* ****************** SECTION HEADER ************ */
+.header {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3.12rem;
+  padding-block: 0.75rem;
+}
+
+
+.header__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__btnClose {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  transform: scale(0);
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.header__btnMenu {
+  position: absolute;
+  display: block;
+  transform: scale(1);
+  opacity: 1;
+  transition: all .5s ease;
+}
+.header__btnMenu  path{
+  width: 2.5rem;
+  stroke: var(--secondary-darkblue);
+}
+
+
+
+.header__image {
+  width: 3rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.28rem;
+  font-family: var(--font-roboto);
+}
+
+.header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.header__title {
+  color: var(--brand-primary);
+  font-weight: 700;
+  font-family: var(--font-georgia);
+  font-size: 0.9rem;
+}
+
+@media (width > 900px) {
+  .header {
+    position: relative;
+  }
+
+  .header__btn {
+    display: none;
+  }
+}
+
+
+/* ********** SECTION MENU ************** */
+
+
+.menu {
+  position: absolute;
+  bottom: 72px;
+  display: flex; /* CAMBIAR CON JS A FLEX */
+  transform: translateX(100%);
+  justify-content: end;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-blackclear);
+  transition: transform .3s ease; 
+}
+
+.menu__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .25rem;
+  padding-block: .5rem;
+  padding-inline: 2rem;
+  width: 13rem;
+  border: none;
+  background-color: var(--secondary-green);
+  color: var(--primary-white);
+  font-family: var(--font-open);
+  font-size: .8rem;
+  font-weight: 400;
+  border-radius: 10px;
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-end: 1.5rem;
+  width: 80%;
+  background-color: var(--primary-white);
+}
+
+.menu__line {
+  width: 80%;
+  margin-block: 1.5rem;
+  border: 1px solid var(--secondary_greyline);
+}
+
+.menu__nav {
+  width: 100%;
+  padding-block-end: 10rem;
+}
+
+.menu__social {
+  padding-inline: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu__social a svg{
+  width: 1.5rem;
+}
+
+.menu__social path {
+  fill: var(--secondary-greysky);
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__desktop {
+  display: none;
+}
+
+.nav__link {
+  padding-block: .75rem;
+  padding-inline: 1.5rem;
+  font-family: var(--font-roboto);
+  text-decoration: none;
+  color: var(--secondary-darkblue);
+  font-size: 1rem;
+}
+
+
+@media (width > 550px) {
+  .menu__content {
+   width: 60%;
+  }
+
+}
+
+@media (width > 900px) {
+ .menu {
+  display: none;
+ }
+
+
+ .menu__nav {
+  display: flex;
+ }
+
+ .menu__social--desktop {
+  margin-inline-start: 2rem;
+ }
+
+ .nav__desktop{
+  display: flex;
+ }
+ 
+}
+
+@media (width > 1400px) {
+ .header {
+  padding-inline: 7.12rem;
+ }
+ 
+}
