@@ -24,8 +24,7 @@
   font-display: swap;
 }
     
-
-
+/* Eliminar al acabar */
 :root {
   /* FONTS */
   --font-roboto: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -35,17 +34,23 @@
   /* COLORS */
 
   /* brands colors */
+
   --brand-primary: #d84949;
   --brand-black: #1b1c1e;
 
   /* primary */
-
+  --primary-white: #fff;
   --primary-bloodred: #8c1636;
+  --primary-red: #D23E3E;
 
   /* secondary */
   --secondary-darkblue: #000626;
   --secondary-ocre: #b67837;
   --secondary-beige: #fcfcfc;
+  --secondary-greysky: #999ba8;
+  --secondary-blackclear: #030408b0;
+  --secondary-green: #25d366;
+  --secondary_greyline: #0011661a;
 
   /* accent */
   --accent-golden: #f1b371;
@@ -66,14 +71,17 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: none;
-  overflow: hidden;
+ 
 }
 
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-roboto);
-}
+  background-color: var(--brand-black);
+     color: var(--primary-white);
+
+}  
 
 img {
   width: 25%;
@@ -82,4 +90,15 @@ img {
 
 a {
   text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-family: var(--font-open);
+
 }

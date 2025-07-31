@@ -16,6 +16,7 @@ d.addEventListener('click', (e) => {
     } 
     
     if((e.target === $btnClose) || (e.target !== $btnMenu)){
+        console.log("Cierre")
         $btnMenu.style.transform = "scale(1)"
         $btnMenu.style.opacity = 1
         $btnClose.style.opacity = 0

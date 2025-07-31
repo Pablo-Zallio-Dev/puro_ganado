@@ -13,6 +13,9 @@
     />
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/components/header.css" />
+    <link rel="stylesheet" href="src/css/components/home.css" />
+    <link rel="stylesheet" href="src/css/components/about.css" />
+
   </head>
   <body>
     <!-- SECCION HEADER -->
@@ -25,15 +28,15 @@
         />
         <article class="header__text">
           <p class="header__title">Puro Ganado</p>
-          <p class="header__subtitle">Carniceria</p>
+          <p class="header__subtitle subtitle--color">Carniceria</p>
         </article>
       </section>
       <section class="menu">
         <section class="menu__content">
           <section class="menu__nav">
             <nav class="nav">
-              <a href="" class="nav__link">Inicio</a>
-              <a href="" class="nav__link">Nosotros</a>
+              <a href="#home" class="nav__link">Inicio</a>
+              <a href="#about" class="nav__link">Nosotros</a>
               <a href="" class="nav__link">Productos</a>
               <a href="" class="nav__link">Contacto</a>
             </nav>
@@ -99,8 +102,8 @@
         </section>
       </section>
       <nav class="nav__desktop">
-        <a href="" class="nav__link">Inicio</a>
-        <a href="" class="nav__link">Nosotros</a>
+        <a href="#home" class="nav__link">Inicio</a>
+        <a href="#about" class="nav__link">Nosotros</a>
         <a href="" class="nav__link">Productos</a>
         <a href="" class="nav__link">Contacto</a>
         <section class="menu__social menu__social--desktop">
@@ -155,15 +158,18 @@
           viewBox="0 0 20 20"
         >
           <path
-            fill="currentColor"
+            fill="#000"
             d="m3.219 2.154l6.778 6.773l6.706-6.705c.457-.407.93-.164 1.119.04a.777.777 0 0 1-.044 1.035l-6.707 6.704l6.707 6.702c.298.25.298.74.059 1.014c-.24.273-.68.431-1.095.107l-6.745-6.749l-6.753 6.752c-.296.265-.784.211-1.025-.052c-.242-.264-.334-.72-.025-1.042l6.729-6.732l-6.701-6.704c-.245-.27-.33-.764 0-1.075c.33-.311.822-.268.997-.068Z"
           />
         </svg>
       </section>
     </header>
 
+    <main>
+
+    
     <!-- SECCION HOME -->
-    <section class="home">
+    <section id="home" class="home">
       <section class="home__container">
         <article class="home__content">
           <h1 class="home__title">Puro Ganado</h1>
@@ -180,14 +186,38 @@
     </section>
 
     <!-- SECCION NOSOTROS -->
-    <!-- SECCION RAZONES  -->
-    <!-- SECCION PRODUCTOS -->
-    <!-- SECCION ESPECIALISTAS  -->
-    <!-- SECCION SERVICIOS -->
-    <!-- SECCION OPINIONES -->
-    <!-- SECCION FORM -->
-    <!-- SECCION CONTACTO     -->
-
+     <section id="about" class="section section__about">
+      <section class="about__title title__section">
+        <hr class="title__line">
+          <h2 class="title__title"> Nosotros </h2>
+        <hr class="title__line">
+      </section>
+      <section class="container container--about">
+        <img class="about__image" src="./assets/images/image-about.jpg" alt="image section about" class="about__image">
+        <p class="about__info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Tempore animi eos id odit, asperiores tempora at ducimus aperiam vitae magni ad expedita beatae vel illum nesciunt, omnis distinctio qui incidunt.
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore animi eos id odit, asperiores tempora at ducimus aperiam vitae magni ad expedita beatae vel illum nesciunt, omnis distinctio qui incidunt.
+        
+        </p>
+      </section>
+     </section>
+     <!-- SECCION RAZONES  -->
+      <section class="section section__reasons">
+      <section class="reasons__title title__section">
+        <hr class="title__line">
+          <h2 class="title__title"> Razones que nos distinguen </h2>
+        <hr class="title__line">
+      </section>
+      
+     </section>
+     <!-- SECCION PRODUCTOS -->
+     <!-- SECCION ESPECIALISTAS  -->
+     <!-- SECCION SERVICIOS -->
+     <!-- SECCION OPINIONES -->
+     <!-- SECCION FORM -->
+     <!-- SECCION CONTACTO     -->
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</main>
     <script src="./src/js/main.js"></script>
   </body>
 </html>
