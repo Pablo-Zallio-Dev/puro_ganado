@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +13,9 @@
     />
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/components/header.css" />
-    <link rel="stylesheet" href="src/css/components/home.css" />
-    <link rel="stylesheet" href="src/css/components/about.css" />
-
+    <link rel="stylesheet" href="src/css/components/main.css" />
   </head>
+
   <body>
     <!-- SECCION HEADER -->
     <header class="header">
@@ -37,7 +36,7 @@
             <nav class="nav">
               <a href="#home" class="nav__link">Inicio</a>
               <a href="#about" class="nav__link">Nosotros</a>
-              <a href="" class="nav__link">Productos</a>
+              <a href="#specialists" class="nav__link">Productos</a>
               <a href="" class="nav__link">Contacto</a>
             </nav>
             <section class="menu__social">
@@ -104,7 +103,7 @@
       <nav class="nav__desktop">
         <a href="#home" class="nav__link">Inicio</a>
         <a href="#about" class="nav__link">Nosotros</a>
-        <a href="" class="nav__link">Productos</a>
+        <a href="#specialists" class="nav__link">Productos</a>
         <a href="" class="nav__link">Contacto</a>
         <section class="menu__social menu__social--desktop">
           <a
@@ -166,58 +165,345 @@
     </header>
 
     <main>
+      <!-- SECCION HOME -->
+      <section id="home" class="home">
+        <section class="home__container">
+          <article class="home__content">
+            <h1 class="home__title">Puro Ganado</h1>
+            <h2 class="home__subtitle">Carniceria Argentina</h2>
+            <p class="home__description">Corte argentino, sabor auténtico</p>
+            <img
+              class="home__line"
+              src="./assets/images/home-line.svg"
+              alt="Linea de separacion"
+            />
+            <button class="home__btn">Contáctanos</button>
+          </article>
+        </section>
+      </section>
 
-    
-    <!-- SECCION HOME -->
-    <section id="home" class="home">
-      <section class="home__container">
-        <article class="home__content">
-          <h1 class="home__title">Puro Ganado</h1>
-          <h2 class="home__subtitle">Carniceria Argentina</h2>
-          <p class="home__description">Corte argentino, sabor auténtico</p>
+      <!-- SECCION NOSOTROS -->
+      <section id="about" class="section section__about">
+        <section class="about__title title__section">
+          <hr class="title__line" />
+          <h2 class="title__title">Nosotros</h2>
+          <hr class="title__line" />
+        </section>
+        <section class="container container--about">
           <img
-            class="home__line"
-            src="./assets/images/home-line.svg"
-            alt="line section home"
+            class="about__image"
+            src="./assets/images/image-about.jpg"
+            alt="imagen de seccion nosotros"
+            class="about__image"
           />
-          <button class="home__btn">Contáctanos</button>
-        </article>
+          <p class="about__info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <br />Tempore animi eos id odit, asperiores tempora at ducimus
+            aperiam vitae magni ad expedita beatae vel illum nesciunt, omnis
+            distinctio qui incidunt. <br />Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Tempore animi eos id odit, asperiores
+            tempora at ducimus aperiam vitae magni ad expedita beatae vel illum
+            nesciunt, omnis distinctio qui incidunt.
+          </p>
+        </section>
       </section>
-    </section>
 
-    <!-- SECCION NOSOTROS -->
-     <section id="about" class="section section__about">
-      <section class="about__title title__section">
-        <hr class="title__line">
-          <h2 class="title__title"> Nosotros </h2>
-        <hr class="title__line">
+      <!-- SECCION ESPECIALISTAS  -->
+      <section class="section--specialists">
+        <section id="specialists" class="section">
+          <section class="specialists__title title__section">
+            <hr class="title__line" />
+            <h2 class="title__title">Especialistas en carnes</h2>
+            <hr class="title__line" />
+          </section>
+        </section>
+        <section class="specialist__cards">
+          <section class="specialist__card">
+            <img src="assets/icons/large-ternera.svg" alt="icono de cerdo" />
+            <article class="specialist__description">
+              <h3 class="specialist__title">Ternera</h3>
+              <p class="specialist__info">
+                Cortes tiernos y jugosos, perfectos para guisos, plancha o
+                asado. Sabor auténtico en cada bocado.
+              </p>
+            </article>
+          </section>
+
+          <section class="specialist__card">
+            <img src="assets/icons/large-cerdo.svg" alt="icono de cerdo" />
+            <article class="specialist__description">
+              <h3 class="specialist__title">Cerdo</h3>
+              <p class="specialist__info">
+                Carne sabrosa y versátil. Ideal para cocinar al horno, a la
+                parrilla o saltear con tu toque personal.
+              </p>
+            </article>
+          </section>
+
+          <section class="specialist__card">
+            <img src="assets/icons/large-granja.svg" alt="icono de cerdo" />
+            <article class="specialist__description">
+              <h3 class="specialist__title">Granja</h3>
+              <p class="specialist__info">
+                Pollo y otras carnes blancas de calidad. Ligeras, nutritivas y
+                listas para tu receta favorita.
+              </p>
+            </article>
+          </section>
+
+          <section class="specialist__card">
+            <img src="assets/icons/large-embutido.svg" alt="icono de cerdo" />
+            <article class="specialist__description">
+              <h3 class="specialist__title">Embutidos</h3>
+              <p class="specialist__info">
+                Chorizos, morcillas y más, hechos con tradición. Perfectos para
+                picar, compartir o llevar al fuego.
+              </p>
+            </article>
+          </section>
+
+          <section class="specialist__card">
+            <img src="assets/icons/large-parrilla.svg" alt="icono de cerdo" />
+            <article class="specialist__description">
+              <h3 class="specialist__title">Parrilla</h3>
+              <p class="specialist__info">
+                Cortes argentinos pensados para el fuego. Jugosos, intensos y
+                perfectos para asar y compartir.
+              </p>
+            </article>
+          </section>
+
+          <section class="specialist__card">
+            <img src="assets/icons/large-premium.svg" alt="icono de cerdo" />
+            <article class="specialist__description">
+              <h3 class="specialist__title">Cortes Premium</h3>
+              <p class="specialist__info">
+                Selección de cortes nobles, tiernos y sabrosos. Para los que
+                disfrutan la carne en su mejor versión.
+              </p>
+            </article>
+          </section>
+        </section>
       </section>
-      <section class="container container--about">
-        <img class="about__image" src="./assets/images/image-about.jpg" alt="image section about" class="about__image">
-        <p class="about__info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Tempore animi eos id odit, asperiores tempora at ducimus aperiam vitae magni ad expedita beatae vel illum nesciunt, omnis distinctio qui incidunt.
-          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore animi eos id odit, asperiores tempora at ducimus aperiam vitae magni ad expedita beatae vel illum nesciunt, omnis distinctio qui incidunt.
-        
-        </p>
-      </section>
-     </section>
-     <!-- SECCION RAZONES  -->
+
+      <!-- SECCION RAZONES  -->
       <section class="section section__reasons">
-      <section class="reasons__title title__section">
-        <hr class="title__line">
-          <h2 class="title__title"> Razones que nos distinguen </h2>
-        <hr class="title__line">
+        <section class="reasons__title title__section">
+          <hr class="title__line" />
+          <h2 class="title__title">Razones que nos distinguen</h2>
+          <hr class="title__line" />
+        </section>
+        <section class="reasons__cards">
+          <article class="reasons__card">
+            <img
+              src="assets/images/reasons-image-1.png"
+              alt="Imagen de seccion razones"
+              class="reasons__image"
+            />
+            <h3 class="reasons__title">Calidad y atencion</h3>
+            <p class="reasons__text">
+              Cortamos la carne como se ha hecho siempre: con técnica, respeto y
+              sabor.
+            </p>
+          </article>
+
+          <article class="reasons__card">
+            <img
+              src="assets/images/reasons-image-2.png"
+              alt="Imagen de seccion razones"
+              class="reasons__image"
+            />
+            <h3 class="reasons__title">Corte Argentino</h3>
+            <p class="reasons__text">
+              Ofrecemos productos cárnicos de primera calidad, una amplia
+              variedad y una atención al cliente personalizada.
+            </p>
+          </article>
+
+          <article class="reasons__card">
+            <img
+              src="assets/images/reasons-image-3.png"
+              alt="Imagen de seccion razones"
+              class="reasons__image"
+            />
+            <h3 class="reasons__title">No es solo carne</h3>
+            <p class="reasons__text">
+              Es cultura argentina en cada corte, hazla fácil, hazla sabrosa.
+              Hazla Puro Ganado
+            </p>
+          </article>
+        </section>
       </section>
+
+      <p>POSIBLE SLIDER</p>
+
+      <!-- SECCION PRODUCTOS -->
+
+      <section class="section section__product">
+        <section class="product__title title__section">
+          <hr class="title__line" />
+          <h2 class="title__title">Nuestros productos</h2>
+          <hr class="title__line" />
+        </section>
+        <section class="products__cards">
+          <section class="products__product">
+            <section class="product__card">
+              <img
+                class="product__image"
+                src="./assets/images/image-product-2.jpg"
+                alt="imagen de proucto latino"
+              />
+              <article class="product__info">
+                <h3 class="products__title">TERMOS</h3>
+                <h5 class="product__subtitle">TODAS LAS MARCAS</h5>
+                <hr class="product__line" />
+                <p class="product__text">
+                  Aqui iria texto descriptivo producto relacionado en la imagen
+                </p>
+              </article>
+            </section>
+
+            <section class="product__card">
+              <article class="product__info">
+                <h3 class="products__title">YERBAS</h3>
+                <h5 class="product__subtitle">TODAS LAS MARCAS</h5>
+                <hr class="product__line" />
+                <p class="product__text">
+                  Aqui iria texto descriptivo producto relacionado en la imagen
+                </p>
+              </article>
+              <img
+                class="product__image"
+                src="./assets/images/image-product-3.jpg"
+                alt="imagen de proucto latino"
+              />
+            </section>
+          </section>
+          <section class="products__product">
+            <section class="product__card">
+              <img
+                class="product__image"
+                src="./assets/images/image-product-4.jpg"
+                alt="imagen de proucto latino"
+              />
+              <article class="product__info">
+                <h3 class="products__title">DULCE DE LECHE</h3>
+                <h5 class="product__subtitle">TODAS LAS MARCAS</h5>
+                <hr class="product__line" />
+                <p class="product__text">
+                  Aqui iria texto descriptivo producto relacionado en la imagen
+                </p>
+              </article>
+            </section>
+
+            <section class="product__card">
+              <article class="product__info">
+                <h3 class="products__title">VINOS</h3>
+                <h5 class="product__subtitle">TODAS LAS MARCAS</h5>
+                <hr class="product__line" />
+                <p class="product__text">
+                  Aqui iria texto descriptivo producto relacionado en la imagen
+                </p>
+              </article>
+              <img
+                class="product__image"
+                src="./assets/images/image-product-5.jpg"
+                alt="imagen de proucto latino"
+              />
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!-- SECCION SERVICIOS -->
+
+      <section class="section section__service">
+        <section class="services__title title__section">
+          <hr class="title__line" />
+          <h2 class="title__title">Servicios</h2>
+          <hr class="title__line" />
+        </section>
+      </section>
+      <section class="service__content">
+        <img
+          class="service__image"
+          src="./assets/images/image-service.jpg"
+          alt=""
+        />
+
+        <section class="service__cards">
+          <section class="service__card">
+            <img
+              class="service__icon"
+              src="assets/icons/service-delivery.svg"
+              alt=""
+            />
+            <h3 class="service__title">Reparto a domicilio</h3>
+            <p class="service__text">
+              Nuestro servicio de reparto a domicilio garantiza calidad y sabor
+              en cada entrega. ¡Haz tu pedido y saborea la diferencia!
+            </p>
+          </section>
+          <section class="service__card">
+            <img
+              class="service__icon"
+              src="assets/icons/service-delivery.svg"
+              alt=""
+            />
+            <h3 class="service__title">Reparto a domicilio</h3>
+            <p class="service__text">
+              Nuestro servicio de reparto a domicilio garantiza calidad y sabor
+              en cada entrega. ¡Haz tu pedido y saborea la diferencia!
+            </p>
+          </section>
+          <section class="service__card">
+            <img
+              class="service__icon"
+              src="assets/icons/service-delivery.svg"
+              alt=""
+            />
+            <h3 class="service__title">Reparto a domicilio</h3>
+            <p class="service__text">
+              Nuestro servicio de reparto a domicilio garantiza calidad y sabor
+              en cada entrega. ¡Haz tu pedido y saborea la diferencia!
+            </p>
+          </section>
+        </section>
+      </section>
+
+      <!-- SECCION OPINIONES -->
+
+      <section class="reviews__bg--white">
+        <section class="section section__reviews">
+          <section class="reviews__title title__section">
+            <hr class="title__line" />
+            <h2 class="title__title">Lo que dicen nuestros clientes</h2>
+            <hr class="title__line" />
+          </section>
+          <section class="review__content">
+            <p class="review__text">
+              Nos llena de orgullo contar con la confianza de quienes eligen
+              nuestros productos.
+            </p>
+            <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+            <script
+              src="https://static.elfsight.com/platform/platform.js"
+              async
+            ></script>
+            <div
+              class="elfsight-app-bc5e1f33-e756-42c5-997e-1bdeed6bea98"
+              data-elfsight-app-lazy
+            ></div>
+          </section>
+        </section>
+      </section>
+
+      <!-- SECCION FORM -->
       
-     </section>
-     <!-- SECCION PRODUCTOS -->
-     <!-- SECCION ESPECIALISTAS  -->
-     <!-- SECCION SERVICIOS -->
-     <!-- SECCION OPINIONES -->
-     <!-- SECCION FORM -->
-     <!-- SECCION CONTACTO     -->
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</main>
+
+      <!-- SECCION CONTACTO     -->
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </main>
     <script src="./src/js/main.js"></script>
   </body>
 </html>

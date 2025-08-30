@@ -1,0 +1,713 @@
+/* Eliminar al acabar */
+:root {
+  /* FONTS */
+  --font-roboto: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-open: "open-sans", "Segoe UI", Tahoma, Geneva, sans-serif;
+  --font-georgia: "georgia", Georgia, "Times New Roman", Times, serif;
+
+  /* COLORS */
+
+  /* brands colors */
+
+  --brand-primary: #d84949;
+  --brand-black: #1b1c1e;
+
+  /* primary */
+  --primary-white: #fff;
+  --primary-bloodred: #8c1636;
+  --primary-red: #D23E3E;
+
+  /* secondary */
+  --secondary-darkblue: #000626;
+  --secondary-on-dark: #12131a;
+
+
+  --secondary-ocre: #b67837;
+  --secondary-beige: #fcfcfc;
+  --secondary-greysky: #999ba8;
+  --secondary-blackclear: #030408b0;
+  --secondary-green: #25d366;
+  --secondary-greyline: #0011661a;
+  --secondary-greytext: #cacbcb;
+
+  /* accent */
+  --accent-golden: #f1b371;
+  --accent-rosewood: #9a7678;
+}
+
+
+/* #########################################
+################# SECCION HOME ##############
+############################################ */
+
+.home {
+  background-color: var(--secondary-darkblue); /* fallback */
+  background-image: url("../../../assets/images/image-home.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.home__btn {
+  margin-block-start: 4rem;
+  padding-block: .75rem;
+  padding-inline: 1.5rem;
+  border: 1px solid var(--primary-white);
+  color: var(--primary-white);
+  background-color: var(--primary-red);
+  border-radius: .5rem;
+  font-family: var(--font-open);
+  font-size: 1rem;
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #020306;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 3, 6, 1) 16%,
+    rgba(2, 3, 6, 0) 80%
+  );
+  color: var(--primary-white);
+}
+
+
+.home__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 10rem;
+}
+.home__description {
+  font-family: var(--font-open);
+  margin-block-start: 2rem;
+  color: var(--secondary-greytext);
+}
+
+.home__title {
+  font-family: var(--font-georgia);
+  font-size: 2.5rem;
+}
+
+.home__subtitle {
+font-size: 1rem;
+letter-spacing: .4rem;
+font-family: var(--font-open);
+color: var( --secondary-greytext);
+}
+
+
+.home__line {
+  width: 13rem;
+  align-self: flex-end;
+}
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+@media (width > 900px) {
+  .home__container {
+    align-items: flex-start;
+    background: #020306;
+    background: linear-gradient(
+      90deg,
+      rgba(2, 3, 6, 1) 30%,
+      rgba(2, 3, 6, 0) 90%
+    );
+  }
+
+  .home__btn {
+    margin-block-start: 2rem;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+  }
+
+  .home__btn:hover {
+    transform: scale(1.04);
+  }
+   .home__description {
+    font-size: 1rem;
+    font-weight: 100;
+    margin-block-start: 1rem;
+    }
+
+  .home__content {
+    margin-block-start: 13rem;
+    margin-inline-start: 8rem;
+    align-items: flex-start;
+  }
+
+  .home__title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+
+  .home__subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .home__line {
+    align-self: center;
+  }
+}
+
+@media (width > 1200px) {
+
+  .home__description {
+    font-size: 1.5rem;
+    font-weight: 100;
+    }
+
+  .home__content {
+    margin-inline-start: 10rem;
+    align-items: flex-start;
+  }
+
+  .home__title {
+    font-size: 5rem;
+    line-height: 4.5rem;
+  }
+
+  .home__subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .home__line {
+    align-self: center;
+  }
+}
+
+
+
+/* #########################################
+################# SECCION ABOUT ##############
+############################################ */
+
+.about__info {
+  font-size: .75rem;
+  text-align: center;
+}
+
+.about__image {
+  width: 15rem;
+}
+
+.container--about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding-block: 4rem;
+}
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+@media (width > 900px) {
+  .container--about {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* #########################################
+################# SECCION SPECIALIST ##############
+############################################ */
+
+.section--specialists{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--secondary-darkblue);
+ background-color: var(--secondary-beige);
+}
+
+.specialist__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 2rem;
+  margin-block-end: 6rem;
+  max-width: 1200px;
+}
+
+.specialist__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 17rem;
+  border: 1px solid var(--secondary-greysky);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 15px -3px rgba(0,0,0,0.3);
+  transition: transform .2s ease-in-out;
+}
+
+.specialist__description {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.specialist__title {
+  font-family: var(--font-open);
+  color: var(--primary-bloodred);
+}
+
+.specialist__info {
+  font-size: .85rem;
+}
+
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+@media (width > 900px) {
+  .specialist__cards {
+    gap: 2.5rem;
+  }
+
+  .specialist__card:hover{
+    transform: scale(1.05);
+  }   
+}
+
+/* #########################################
+################# SECCION REASONS ##############
+############################################ */
+
+.reasons__cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.reasons__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.reasons__image {
+  width: 200px;
+  margin-block-end: 1rem;
+}
+
+.reasons__text {
+  text-align: center;
+  margin-block-start: .25rem;
+  color: var(--secondary-greytext);
+  font-size: .85rem;
+}
+
+.reasons__title {
+  font-family: var(--font-open);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+
+/* #########################################
+################# SECCION PRODUCTOS ##############
+############################################ */
+
+
+.products__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-block: 5rem;
+}
+
+.products__product {
+  width: 300px;
+}
+
+
+.product__card {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__image {
+  width: 50%;
+  object-fit: cover;
+}
+
+.product__info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: .75rem;
+  padding-block: .75rem;
+  background-color: var(--secondary-beige);
+  color: var(--secondary-darkblue);
+  text-align: center;
+  box-shadow: inset 9px 9px 38px #c3c3c3,
+            inset -9px -9px 38px #fdfdfd;
+}
+
+.product__line {
+  width: 3rem;
+  margin-block-start: .5rem;
+  border-color: var(--accent-golden);
+}
+
+.product__subtitle {
+  font-family: var(--font-open);
+  font-size: .6rem;
+  margin-block-start: .5rem;
+
+}
+
+.products__title {
+  font-family: var(--font-georgia);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--accent-golden);
+}  
+
+
+.product__text {
+  margin-block-start: 1rem;
+  margin-block-end: 1.5rem;
+  font-family: var(--font-roboto);
+  font-size: .75rem;
+  text-align: center;
+}
+
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+
+@media (width > 500px) {
+
+  .products__product {
+    width: 390px;
+  }
+
+}
+
+
+@media (width > 900px) {
+
+
+
+.products__product {
+  display: flex;
+  width: 300px;
+}
+
+.products__product {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.product__card {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.product__subtitle {
+  font-family: var(--font-open);
+  font-size: .9rem;
+}
+
+.products__title {
+  font-family: var(--font-georgia);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--accent-golden);
+}  
+
+
+.product__text {
+  margin-block-start: 1rem;
+  margin-block-end: 1.5rem;
+  font-family: var(--font-roboto);
+  font-size: .8rem;
+  text-align: center;
+}
+
+.product__info {
+  justify-content: center;
+}
+
+}
+
+@media (width > 1124px) {
+  
+  .products__cards {
+  flex-direction: row;
+}
+
+}
+
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+
+/* #########################################
+################# SECCION SERVICE ##############
+############################################ */
+
+.service__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.service__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-block: 3rem;
+  padding-inline: 1.5rem;
+}
+
+.service__card {
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+  width: 250px;
+  background-color: var(--secondary-on-dark);
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 18px -8px var(--secondary-greysky);
+-moz-box-shadow: 0px 0px 18px -8px var(--secondary-greysky);
+box-shadow: 0px 0px 18px -8px var(--secondary-greysky);
+transition: transform .1s ease-in, box-shadow .1s ease-in;
+}
+
+.service__icon {
+  width: 44px;
+}
+
+
+.service__image {
+  margin-block: 3rem;
+  width: 85%;
+  max-width: 650px;
+}
+
+.service__title {
+  margin-block: .5rem;
+  color: var(--accent-golden);
+  font-size: 1.25rem;
+  font-family: var(--font-open);
+
+}
+
+.service__text {
+  font-family: var(--font-roboto);
+  font-size: .8rem;
+}
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+
+@media (width > 1124px) {
+
+  .service__cards {
+    gap: 4rem;
+    padding-block: 5rem;
+    padding-inline: 2.5rem;
+  }
+
+  .service__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+
+  .service__card:hover {
+    transform: scale(1.04);
+    -webkit-box-shadow: 0px 0px 18px -4px var(--secondary-greysky);
+-moz-box-shadow: 0px 0px 18px -4px var(--secondary-greysky);
+box-shadow: 0px 0px 18px -4px var(--secondary-greysky);
+  }
+
+  .service__text {
+    text-align: center;
+  }
+}
+
+
+/* #########################################
+################# SECCION  REVIEWS  ##############
+############################################ */
+
+.reviews__bg--white {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--primary-white);
+  color: var(--brand-black);
+}
+
+.review__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-inline: 1.5rem;
+  
+}
+
+.review__text {
+  text-align: center;
+}
+
+.hALAEh {
+  height: 18rem;
+}
+
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+@media (width > 1024px) {
+
+  .review__content {
+    gap: 5rem;
+  }
+  .review__text {
+    font-size: 1.25rem;
+}
+
+}
+
+
+/* #########################################
+################# SECCION FORM ##############
+############################################ */
+
+
+
+
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+
+
+
+
+/* #########################################
+################# SECCION  ##############
+############################################ */
+
+
+/*  ===============================================
+================== RESPONSIVE =================
+=================================================== */
+
+
+
+
+/* 
+
+
+
+
+.product__cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  border: 1px solid red;
+  padding-inline: 1rem;
+}
+
+.product__card {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid greenyellow;
+}
+
+.product--order img {
+ order: 1;
+}
+
+.product__image {
+  width: 50%;
+  object-fit: cover;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: .75rem;
+  padding-block: .75rem;
+  background-color: var(--secondary-beige);
+  color: var(--secondary-darkblue);
+  width: 50%;
+}
+
+.product__line {
+  width: 3rem;
+  margin-block-start: .5rem;
+  border-color: var(--accent-golden);
+}
+
+.product__subtitle {
+  font-family: var(--font-open);
+  font-size: .6rem;
+}
+
+.product__title {
+  font-family: var(--font-georgia);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--accent-golden);
+}  
+
+
+.product__text {
+  margin-block-start: 1rem;
+  margin-block-end: 1.5rem;
+  font-family: var(--font-roboto);
+  font-size: .75rem;
+  text-align: center;
+}*/
