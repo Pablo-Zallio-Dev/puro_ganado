@@ -1,0 +1,145 @@
+:root {
+  /* COLORS */
+  /* Brand */
+  --color-brand-primary: #d84949;
+  --color-brand-black: #1b1c1e;
+
+  /* Primary */
+  --color-primary-bloodred: #8c1636;
+  --color-primary-white: #fff;
+  --color-primary-black: #000;
+
+  /* Secondary */
+  --color-secondary-darkBlue: #000626;
+  --color-secondary-ocre: #b67837;
+  --color-secondary-greenLight: #25D366;
+
+  /* Accent */
+  --color-accent-golden: #f1b371;
+  --color-accent-roseWood: #9a7678;
+
+  /* FONTS */
+  --font-roboto: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-open: "open-sans", "Segoe UI", Tahoma, Geneva, sans-serif;
+  --font-georgia: "georgia", Georgia, "Times New Roman", Times, serif;
+}
+
+/* **************************************
+************** SECCION MENU MOBILE ********* 
+******************************************/
+
+.menu-mobile {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+  background-color: var(--color-primary-white);
+}
+
+.menu-mobile__btns {
+  display: flex;
+}
+
+.menu-mobile__btn {
+  width: 1.5rem;
+}
+
+.menu-mobile__btn--disabled {
+  display: none;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.menu-mobile__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: .25rem;
+  padding-block: .75rem;
+  margin-block-end: 4rem;
+  border-radius: .75rem;
+  width: 12.5rem;
+  background-color: var(--color-secondary-greenLight);
+  color: var(--color-primary-white);
+  font-family: var(--font-open);
+  font-weight: 600;
+  border: none;
+}
+
+.menu-mobile__contact img {
+  width: 1.25rem;
+}
+
+.menu-mobile__image {
+  width: 2.5rem;
+}
+
+.menu-mobile__link {
+  text-decoration: none;
+  font-family: var(--font-open);
+  font-size: 1rem;
+  color: var(--color-brand-black);
+  font-weight: 400;
+}
+
+.menu-mobile__logo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.menu-mobile__menu {
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  bottom: 58px;
+  right: 0%;
+  width: 100%;
+  background-color: #1b1c1e;
+  transform: translateX(100%);
+  transition: transform 0.1s ease-in-out;
+}
+
+.menu-mobile__navigation {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  background-color: var(--color-primary-white);
+  padding-block-start: 1.5rem;
+  padding-inline-start: 1.5rem;
+}
+
+.menu-mobile__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block-end: 3rem;
+}
+
+.menu-mobile__social {
+  display: flex;
+  gap: 1.5rem;
+  margin-block-end: 10rem;
+}
+
+.menu-mobile__subtitle {
+  font-weight: 400;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.menu-mobile__title {
+  font-size: 0.75rem;
+  font-family: var(--font-georgia);
+  color: var(--color-primary-bloodred);
+}
+
+/* **************************************
+************** SECCION ********* 
+******************************************/

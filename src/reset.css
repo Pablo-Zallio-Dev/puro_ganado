@@ -1,0 +1,8 @@
+/* --- RESET CSS SIMPLE PARA LANDING --- */
+
+/* 1. Eliminar márgenes, paddings y normalizar tipografía */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
