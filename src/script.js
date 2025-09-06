@@ -3,6 +3,8 @@ $btnOpen = d.querySelector(".menu-mobile__btn--open"),
 $btnClose = d.querySelector(".menu-mobile__btn--close"),
 $menu = d.querySelector(".menu-mobile__menu");
 
+const fadeIn = d.querySelector('.fade-in')
+
 
 d.addEventListener('click', (e) => {
     if(e.target === $btnOpen) {
@@ -18,4 +20,20 @@ d.addEventListener('click', (e) => {
 
     }
 })
+
+let observer = new IntersectionObserver(visible, {})
+
+function visible(entries) {
+    let entry = entries[0]
+    if(entry.isIntersecting) {
+        console.log("Visible")
+        fadeIn.classList.add('visible')
+        observer.unobserve(fadeIn);
+    } else {
+        console.log("Invisible")
+        fadeIn.classList.remove('visible')
+    }
+}
+
+observer.observe(fadeIn)
 

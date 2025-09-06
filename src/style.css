@@ -14,6 +14,8 @@
   --color-secondary-darkBlue-40: rgba(0, 5, 36, 0.4);
   --color-secondary-ocre: #b67837;
   --color-secondary-greenLight: #25d366;
+  --color-secondary-grey: #cfcfcf;
+  --color-secondary-dark: #12131a;
 
   /* Accent */
   --color-accent-golden: #f1b371;
@@ -25,6 +27,77 @@
   --font-georgia: "georgia", Georgia, "Times New Roman", Times, serif;
 }
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////// REUSABLE COMPONENTS //////////////////////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* **************************************
+************** TITLE SECCION ************* 
+*****************************************/
+
+.section__container--about {
+  background-color: var(--color-secondary-dark);
+}
+
+.section__container--line {
+  width: 100%;
+  height: 0;
+}
+
+.section__container--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 3rem;
+  width: 100%;
+}
+
+.section__container--text {
+  margin-block: 1rem;
+  color: var(--color-primary-white);
+  font-family: var(--font-georgia);
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+}
+
+.section__container--content {
+  margin-inline: 1.75rem;
+  padding-block-end: 4rem;
+}
+
+/* -------------------------------------------
+-------------- RESPONSIVE TITLE ---------------
+----------------------------------------------*/
+
+@media screen and (min-width: 1023px) {
+  .section__container {
+    padding-inline: 7rem;
+  }
+  .section__container--title {
+    flex-direction: row;
+  }
+
+  .section__container--text {
+    margin-inline: 2rem;
+  }
+
+  .section__container--content {
+    margin-inline: 0;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .section__container {
+    padding-inline: 15rem;
+  }
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////// PARTICULAR COMPONENTS ////////////////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 /* **************************************
 ************** SECCION MENU MOBILE ********* 
 ******************************************/
@@ -33,6 +106,7 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
+  z-index: 999;
   bottom: 0;
   width: 100%;
   padding-block: 0.5rem;
@@ -97,7 +171,7 @@
   display: flex;
   justify-content: end;
   position: fixed;
-  bottom: 58px;
+  bottom: 56px;
   right: 0%;
   width: 100%;
   background-color: #1b1c1e;
@@ -129,14 +203,14 @@
 
 .menu-mobile__subtitle {
   font-weight: 400;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
 }
 
 .menu-mobile__title {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: var(--font-georgia);
   color: var(--color-brand-primary);
 }
@@ -173,7 +247,7 @@
 }
 
 .menu-desktop__image {
-  width: 5rem;
+  width: 4rem;
 }
 
 .menu-desktop__link {
@@ -256,7 +330,6 @@
   .menu-desktop {
     display: flex;
     justify-content: space-between;
-    padding-block: 2rem;
   }
 
   .menu-mobile {
@@ -282,6 +355,204 @@
   }
 }
 
+
+/* ****************************************************************************************************************************************
+*************************************************************** SECCION HOME ************************************************************** 
+*******************************************************************************************************************************************/
+
+.home {
+  width: 100%;
+  height: 100dvh;
+  background-image: url("../assets/images/image-home.avif");
+  background-size: cover;
+}
+
+.home__btn {
+  border: 1px solid var(--color-primary-white);
+  background-color: var(--color-brand-primary);
+  border-radius: 0.5rem;
+  margin-block: 3rem;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  font-family: var(--font-open);
+  font-size: 0.8rem;
+  color: var(--color-primary-white);
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+.home__degraded {
+  display: flex;
+  justify-content: center;
+  padding-block-start: 4rem;
+  width: 100%;
+  height: 100dvh;
+  background: #000000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0) 60%
+  );
+}
+
+.home__description {
+  color: var(--color-secondary-grey);
+  font-family: var(--font-open);
+  font-size: 0.8rem;
+}
+.home__info {
+  margin-inline: 1.5rem;
+  height: min-content;
+  text-align: center;
+  /* border: 2px solid green; */
+  color: var(--color-primary-white);
+}
+
+.home__line {
+  display: none;
+  width: 12rem;
+}
+
+.home__title {
+  margin-block-end: 3rem;
+  font-family: var(--font-georgia);
+  font-size: 4rem;
+}
+
+.home__subtitle {
+  margin-block-end: 1.5rem;
+  text-transform: uppercase;
+  font-family: var(--font-open);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.24rem;
+}
+
+/* -------------------------------------------
+-------------- RESPONSIVE HOME ---------------
+----------------------------------------------*/
+
+@media screen and (min-width: 500px) {
+  .home__subtitle {
+    font-size: 1.25rem;
+  }
+
+  .home__description {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .home__btn {
+    font-size: 1rem;
+  }
+
+  .home__degraded {
+    justify-content: start;
+    align-items: center;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 30%,
+      rgba(0, 0, 0, 0) 90%
+    );
+  }
+
+  .home__info {
+    text-align: start;
+    margin-inline-start: 20%;
+  }
+
+  .home__title {
+    font-size: 5rem;
+    margin-block-end: 2rem;
+  }
+
+  .home__subtitle {
+    font-size: 1.75rem;
+  }
+
+  .home__description {
+    font-size: 1.25rem;
+  }
+
+  .home__line {
+    display: block;
+    width: 12rem;
+    margin-inline-start: 8rem;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .home__degraded {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 0) 90%
+    );
+  }
+}
+
+/* *******************************************************************************************************************************
+********************************************************** SECCION ABOUT ********************************************************* 
+**********************************************************************************************************************************/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: var(--color-primary-white);
+  font-family: var(--font-open);
+}
+
+
+.about__image {
+  width: 75%;
+  max-width: 24rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity .2s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+
+.about__text {
+  text-align: center;
+}
+
+@media screen and (min-width: 1023px) {
+ .about {
+  flex-direction: row;
+  align-items: flex-start;
+ }
+
+ 
+}
+
+
+/* -------------------------------------------
+-------------- ANIMATION - OBSERVER ---------------
+----------------------------------------------*/
+
+.fade-in {
+  opacity: 0;
+  transition: opacity .6s ease-in ;
+  transition-delay: .8s;
+
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* -------------------------------------------
+---------------- RESPONSIVE ------------------
+----------------------------------------------*/
+
 /* **************************************
 ************** SECCION ********* 
 ******************************************/
@@ -289,3 +560,7 @@
 /* -------------------------------------------
 ---------------- RESPONSIVE ------------------
 ----------------------------------------------*/
+
+/* 
+@media screen and (min-width: 1440px)
+ */
