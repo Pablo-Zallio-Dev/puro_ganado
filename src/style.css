@@ -8,14 +8,20 @@
   --color-primary-bloodred: #8c1636;
   --color-primary-white: #fff;
   --color-primary-black: #000;
+  --color-primary-ligth: #faf9f6;
 
   /* Secondary */
+  --color-secondary-light: rgb(252, 252, 252);
+  --color-secondary-beigeLight: #f9f4ef;
   --color-secondary-darkBlue: #000626;
   --color-secondary-darkBlue-40: rgba(0, 5, 36, 0.4);
+  --color-secondary-darkBlue-60: rgba(0, 5, 36, 0.6);
+  --color-secondary-darkBlue-90: rgba(0, 5, 36, 0.9);
   --color-secondary-ocre: #b67837;
   --color-secondary-greenLight: #25d366;
   --color-secondary-grey: #cfcfcf;
   --color-secondary-dark: #12131a;
+  --color-secondary-stroke: #d9d9d9;
 
   /* Accent */
   --color-accent-golden: #f1b371;
@@ -34,6 +40,10 @@
 /* **************************************
 ************** TITLE SECCION ************* 
 *****************************************/
+
+.section__container {
+  color: var(--color-primary-white);
+}
 
 .section__container--about {
   background-color: var(--color-secondary-dark);
@@ -55,7 +65,9 @@
 
 .section__container--text {
   margin-block: 1rem;
-  color: var(--color-primary-white);
+
+  text-align: center;
+  font-size: 1.5rem;
   font-family: var(--font-georgia);
   font-weight: 700;
   letter-spacing: 0.15rem;
@@ -79,6 +91,8 @@
   }
 
   .section__container--text {
+    min-width: max-content;
+    font-size: 2rem;
     margin-inline: 2rem;
   }
 
@@ -92,7 +106,6 @@
     padding-inline: 15rem;
   }
 }
-
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////// PARTICULAR COMPONENTS ////////////////////////////////////////////////// 
@@ -255,16 +268,17 @@
   text-decoration: none;
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
   font-family: var(--font-roboto);
   color: var(--color-brand-black);
+  letter-spacing: 0.05rem;
   border-bottom: 2px solid var(--color-primary-white);
-  transition: color 0.3s ease, border-color 0.1s ease-in;
+  transition: color 0.2s ease-in, border-color 0.2s ease-in;
 }
 
 .menu-desktop__link:hover {
   border-color: var(--color-brand-primary);
-  color: var(--color-primary-black);
+  color: var(--color-brand-primary);
 }
 
 .menu-desktop__logo {
@@ -354,7 +368,6 @@
     width: 28px;
   }
 }
-
 
 /* ****************************************************************************************************************************************
 *************************************************************** SECCION HOME ************************************************************** 
@@ -504,45 +517,354 @@
   font-family: var(--font-open);
 }
 
-
 .about__image {
   width: 75%;
   max-width: 24rem;
 }
 
+.about__text {
+  text-align: center;
+  padding-inline: 0;
+}
+
 .fade-in {
   opacity: 0;
-  transition: opacity .2s ease-in;
+  transition: opacity 0.2s ease-in;
 }
 
 .fade-in.visible {
   opacity: 1;
 }
 
-
-.about__text {
-  text-align: center;
+@media screen and (min-width: 849px) {
+  .about__text {
+    padding-inline: 6rem;
+  }
 }
 
 @media screen and (min-width: 1023px) {
- .about {
-  flex-direction: row;
-  align-items: flex-start;
- }
+  .about {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
- 
+  .about__text {
+    font-size: 1.15rem;
+    padding-inline: 0;
+  }
+}
+
+@media screen and (min-width: 1699px) {
+  .about__text {
+    padding-inline-start: 7rem;
+  }
+}
+
+/* *******************************************************************************************************************************
+********************************************************** SECCION REASONS ********************************************************* 
+**********************************************************************************************************************************/
+
+.section__container--reasons {
+  background-color: var(--color-secondary-dark);
+}
+.section__container--content--reasons {
+  display: flex;
+  justify-content: center;
+}
+.reasons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  margin-block: 5rem;
+  width: 100%;
+}
+
+.reasons__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  width: 16.5rem;
+  border-radius: 10px;
+  border: 1px solid #2b2b2b;
+  box-shadow: 10px 10px 34px 1px rgba(62, 57, 53, 0.75);
+  transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+
+/* AQUI TEBNGO QUE PONER LA IMAGEN SIN FONDO QUE TENGO QUE PEDIR */
+.reasons__image {
+  width: 10rem;
+  margin-block-end: 1.5rem;
+}
+
+.reasons__text {
+  color: var(--color-secondary-light);
+  font-family: var(--font-roboto);
+  text-align: center;
+  font-size: 0.75rem;
+}
+.reasons__title {
+  margin-block-end: 0.75rem;
+  font-family: var(--font-open);
+  font-weight: 500;
+  color: var(--color-primary-white);
+}
+
+/* -------------------------------------------
+---------------- RESPONSIVE ------------------
+----------------------------------------------*/
+
+@media screen and (min-width: 1023px) {
+  .reasons__card {
+    width: 18rem;
+  }
+  .reasons__card:hover {
+    transform: scale(1.025);
+  }
+
+  .reasons__image {
+    width: 12rem;
+    margin-block-end: 2.5rem;
+  }
+
+  .reasons__text {
+    font-size: 0.9rem;
+  }
+
+  .reasons__title {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1323px) {
+  .reasons {
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1623px) {
+  .reasons__card {
+    width: 20rem;
+  }
+  .reasons__text {
+    padding-inline: 2rem;
+  }
+}
+
+/* *******************************************************************************************************************************
+********************************************************** SECCION MEATS ********************************************************* 
+**********************************************************************************************************************************/
+
+.meats__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 23rem;
+  padding-inline: 1rem;
+  padding-block: 1.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-secondary-stroke);
+  box-shadow: 4px 3px 13px -2px var(--color-secondary-stroke);
+  transition: transform 0.1s ease-in;
+}
+
+.meats__card--text {
+  font-family: var(--font-roboto);
+  color: var(--color-secondary-darkBlue-60);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.meats__card--title {
+  margin-block-end: 0.5rem;
+  font-weight: 700;
+  color: var(--color-primary-bloodred);
+  font-family: var(--font-open);
+  letter-spacing: 0.075rem;
+}
+
+.meats__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.section__container--meats {
+  background-color: var(--color-primary-ligth);
+  color: var(--color-brand-black);
+}
+
+/* -------------------------------------------
+---------------- RESPONSIVE ------------------
+----------------------------------------------*/
+
+@media screen and (min-width: 1023px) {
+  .meats__card:hover {
+    transform: scale(1.03);
+  }
+  .meats__card--img {
+    width: 10rem;
+  }
+
+  .meats__card--text {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .meats__card--title {
+    font-size: 1.25rem;
+  }
+
+  .meats__cards {
+    margin-block: 4rem;
+    justify-content: space-between;
+  }
+}
+
+/* *******************************************************************************************************************************
+********************************************************** SECCION PRODUCTS ********************************************************* 
+**********************************************************************************************************************************/
+
+.section__container--products {
+  background-color: var(--color-secondary-dark);
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  margin-block: 4rem;
+  color: var(--color-primary-white);
+}
+
+.products__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 12rem);
+  max-width: 385px;
+}
+
+.products__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+  max-width: max-content;
+  background-color: var(--color-secondary-beigeLight);
+  color: var(--color-secondary-darkBlue);
+}
+
+.products__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products__card--line {
+  margin-block-start: 0.5rem;
+  margin-block-end: 1rem;
+  width: 3rem;
+  border: 1px solid var(--color-secondary-ocre);
+}
+
+.products__card--subtitle {
+  text-transform: uppercase;
+  font-family: var(--font-open);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--color-secondary-darkBlue-60);
+  text-align: center;
+}
+
+.products__card--text {
+  color: var(--color-secondary-darkBlue-90);
+  font-family: var(--font-roboto);
+  font-size: 0.75rem;
+  text-align: center;
+}
+.products__card--title {
+  font-size: 1rem;
+  font-family: var(--font-georgia);
+  color: var(--color-secondary-ocre);
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 
+
+
+
+.products__wraps {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+/* -------------------------------------------
+---------------- RESPONSIVE ------------------
+----------------------------------------------*/
+
+@media screen and (min-width: 1023px) {
+  .products__cards {
+    max-width: 100%;
+  }
+
+  .products__image {
+    filter: saturate(0);
+    transition: filter 0.2s ease-in, transform 0.2s ease-in;
+  }
+
+  .products__image:hover {
+    filter: saturate(0.8);
+  }
+
+  .products__card--title {
+    font-size: 1.5rem;
+  }
+
+  .products__card--subtitle {
+    font-size: 1rem;
+  }
+
+  .products__card--text {
+    font-size: 0.9rem;
+  }
+
+  .products__wraps {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products__cards {
+    grid-template-rows: repeat(2, 15rem);
+  }
+
+  .products__card {
+    padding-inline: 3rem;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .products__card {
+    padding-inline: 5rem;
+  }
+
+  .products__cards {
+    grid-template-rows: repeat(2, 18rem);
+  }
+}
 /* -------------------------------------------
 -------------- ANIMATION - OBSERVER ---------------
 ----------------------------------------------*/
 
 .fade-in {
   opacity: 0;
-  transition: opacity .6s ease-in ;
-  transition-delay: .8s;
-
+  transition: opacity 0.6s ease-in;
+  transition-delay: 0.8s;
 }
 
 .fade-in.visible {
@@ -553,9 +875,9 @@
 ---------------- RESPONSIVE ------------------
 ----------------------------------------------*/
 
-/* **************************************
-************** SECCION ********* 
-******************************************/
+/* *******************************************************************************************************************************
+********************************************************** SECCION ABOUT ********************************************************* 
+**********************************************************************************************************************************/
 
 /* -------------------------------------------
 ---------------- RESPONSIVE ------------------
