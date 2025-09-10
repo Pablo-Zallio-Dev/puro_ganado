@@ -9,8 +9,11 @@
   --color-primary-white: #fff;
   --color-primary-black: #000;
   --color-primary-ligth: #faf9f6;
+  --color-valid-green: #29b751;
+  --color-invalid-red: #b72929;
 
   /* Secondary */
+  --color-secondary-blue: #0673bc;
   --color-secondary-light: rgb(252, 252, 252);
   --color-secondary-beigeLight: #f9f4ef;
   --color-secondary-darkBlue: #000626;
@@ -19,7 +22,7 @@
   --color-secondary-darkBlue-90: rgba(0, 5, 36, 0.9);
   --color-secondary-ocre: #b67837;
   --color-secondary-greenLight: #25d366;
-  --color-secondary-grey: #cfcfcf;
+  --color-secondary-grey: #fcfcfc;
   --color-secondary-dark: #12131a;
   --color-secondary-stroke: #d9d9d9;
 
@@ -59,7 +62,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-block: 3rem;
+  padding-block-start: 3rem;
+  padding-block-end: 3rem;
   width: 100%;
 }
 
@@ -88,6 +92,8 @@
   }
   .section__container--title {
     flex-direction: row;
+  padding-block-start: 7rem;
+
   }
 
   .section__container--text {
@@ -98,6 +104,7 @@
 
   .section__container--content {
     margin-inline: 0;
+
   }
 }
 
@@ -255,7 +262,7 @@
 .menu-desktop {
   display: none;
   justify-content: space-around;
-  padding-block: 1rem;
+  padding-block: .75rem;
   padding-inline: 3rem;
 }
 
@@ -344,6 +351,10 @@
   .menu-desktop {
     display: flex;
     justify-content: space-between;
+     position: fixed;
+     z-index: 600;
+        width: 100%;
+        background-color: var(--color-primary-white);
   }
 
   .menu-mobile {
@@ -354,6 +365,7 @@
 @media screen and (min-width: 1440px) {
   .menu-desktop {
     justify-content: space-around;
+   
   }
 
   .menu-desktop__menu {
@@ -374,10 +386,10 @@
 *******************************************************************************************************************************************/
 
 .home {
-  width: 100%;
-  height: 100dvh;
   background-image: url("../assets/images/image-home.avif");
   background-size: cover;
+  width: 100%;
+  height: 100svh;
 }
 
 .home__btn {
@@ -392,6 +404,7 @@
   color: var(--color-primary-white);
   font-weight: 500;
   letter-spacing: 0.05rem;
+  cursor: pointer;
 }
 
 .home__degraded {
@@ -399,8 +412,7 @@
   justify-content: center;
   padding-block-start: 4rem;
   width: 100%;
-  height: 100dvh;
-  background: #000000;
+  height: 100svh;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 30%,
@@ -588,8 +600,8 @@
   padding: 1.5rem;
   width: 16.5rem;
   border-radius: 10px;
-  border: 1px solid #2b2b2b;
-  box-shadow: 10px 10px 34px 1px rgba(62, 57, 53, 0.75);
+  border: 1px solid var(--color-brand-black);
+  box-shadow: 4px 3px 13px -2px var(--color-brand-black);
   transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
 }
 
@@ -703,6 +715,9 @@
 ----------------------------------------------*/
 
 @media screen and (min-width: 1023px) {
+  .meats__card {
+    max-width: 20rem;
+  }
   .meats__card:hover {
     transform: scale(1.03);
   }
@@ -721,6 +736,12 @@
   .meats__cards {
     margin-block: 4rem;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .meats__card {
+    max-width: 23rem;
   }
 }
 
@@ -793,10 +814,6 @@
   font-weight: 500;
 }
 
-
-
-
-
 .products__wraps {
   display: flex;
   justify-content: center;
@@ -857,6 +874,322 @@
     grid-template-rows: repeat(2, 18rem);
   }
 }
+
+/* *******************************************************************************************************************************
+********************************************************** SECCION SERVICE ********************************************************* 
+**********************************************************************************************************************************/
+
+.section__container--service {
+  background-color: var(--color-secondary-dark);
+      padding-block-end: 5rem;
+
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-block: 3rem;
+}
+
+.service__card {
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  max-width: 22rem;
+  background-color: var(--color-brand-black);
+  border-radius: 0.75rem;
+}
+
+.service__title {
+  margin-block-start: 1rem;
+  margin-block-end: 0.5rem;
+  font-family: var(--font-open);
+  color: var(--color-secondary-ocre);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.service__text {
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+  font-family: var(--font-roboto);
+  color: var(--color-secondary-grey);
+}
+.service__image {
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 0.5rem;
+}
+/* -------------------------------------------
+---------------- RESPONSIVE ------------------
+----------------------------------------------*/
+
+@media screen and (min-width: 1023px) {
+  .service__card {
+    padding-block: 1.5rem;
+    padding-inline: 1.75rem;
+    max-width: 23rem;
+  }
+
+  .service__title {
+    margin-block-start: 1.15rem;
+    margin-block-end: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .service__text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: var(--font-roboto);
+    color: var(--color-secondary-grey);
+  }
+}
+
+/* *******************************************************************************************************************************
+********************************************************** SECCION OPINION ********************************************************* 
+**********************************************************************************************************************************/
+
+.opinion__text {
+  text-align: center;
+  margin-block: 2rem;
+  font-family: var(--font-open);
+  font-size: 1rem;
+}
+.section__container--opinion {
+  color: var(--color-brand-black);
+}
+
+.ti-widget {
+  padding-inline: 1rem;
+}
+
+.ti-review-item {
+  width: 25%;
+}
+
+/* *******************************************************************************************************************************
+********************************************************** SECCION CONTACT ********************************************************* 
+**********************************************************************************************************************************/
+
+.contact {
+  background-color: var(--color-primary-ligth);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 4rem;
+  height: 100%;
+  background-color: var(--color-secondary-darkBlue-60);
+}
+
+.contact__form {
+  width: 100%;
+  max-width: 25rem;
+  margin: 0 auto;
+  padding-block: 4rem;
+  padding-inline: 1rem;
+}
+
+.contact__text {
+  margin-block: 1rem;
+  margin-inline: 1rem;
+  color: var(--color-primary-white);
+  font-family: var(--font-georgia);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.contact__title {
+  background-image: url(../assets/images/image-form.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.contact__subtitle {
+  color: var(--color-primary-white);
+  font-family: var(--font-roboto);
+  text-align: center;
+  margin-block-start: 1.5rem;
+}
+
+.form__accept,
+.form__accept a {
+  font-family: var(--font-open);
+  font-size: 0.75rem;
+}
+
+.form__accept a {
+  color: var(--color-secondary-blue);
+  font-weight: 600;
+}
+
+.form__button,
+.response__btn {
+  width: 100%;
+  padding-block: 0.75rem;
+  border: none;
+  border-radius: 0.35rem;
+  margin-block: 2rem;
+  background-color: var(--color-primary-bloodred);
+  color: var(--color-primary-white);
+  font-family: var(--font-roboto);
+  font-size: 0.85rem;
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form__contact *::placeholder {
+  font-family: var(--font-open);
+}
+
+.form__contact [required]:valid {
+  border: 1px solid var(--color-valid-green);
+}
+
+.form__contact [required]:invalid {
+  border: 1px solid var(--color-invalid-red);
+}
+
+.form__check {
+  display: flex;
+  gap: 0.75rem;
+  margin-block-start: 2rem;
+}
+
+.form__check--error {
+  border: 1px solid var(--color-brand-primary);
+  border-radius: 0.2rem;
+  padding: 0.25rem;
+}
+
+.form__contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__contact label {
+      margin-block-start: 1rem;
+
+  margin-block-end: 0.5rem;
+  font-family: var(--font-roboto);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.form__contact textarea {
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+  margin-block-start: 1.5rem;
+  font-family: var(--font-roboto);
+  font-size: 0.75rem;
+  resize: none;
+}
+
+.form__input {
+  margin-block-end: 1rem;
+
+  padding-inline: 0.25rem;
+  padding-block: 0.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-roboto);
+}
+
+.form__span {
+  display: none;
+  background-color: var(--color-brand-primary);
+  color: var(--color-primary-white);
+  font-family: var(--font-open);
+  font-size: 0.65rem;
+  padding-block: 0.4rem;
+  padding-inline: 1rem;
+}
+
+.span__active {
+  display: block;
+  margin-block-start: -1rem;
+  margin-block-end: 1rem;
+}
+
+.response {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--color-secondary-darkBlue-40);
+}
+
+.response__comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--color-primary-white);
+}
+
+.response__image {
+  width: 7rem;
+}
+
+.response__text {
+  text-align: center;
+  font-family: var(--font-open);
+}
+
+@media screen and (min-width: 1023px) {
+
+  .contact__form {
+    padding-block-start: 7rem;
+  }
+  .contact {
+    flex-direction: row;
+  }
+
+  .contact__title {
+    width: 50%;
+  }
+
+  .contact__text {
+    font-size: 2rem;
+    margin-inline: 2rem;
+  }
+
+  .contact__subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact__text {
+    margin-inline: 12rem;
+  }
+}
+/* -------------------------------------------
+---------------- RESPONSIVE ------------------
+----------------------------------------------*/
+
+/* -------------------------------------------
+---------------- RESPONSIVE ------------------
+----------------------------------------------*/
+
 /* -------------------------------------------
 -------------- ANIMATION - OBSERVER ---------------
 ----------------------------------------------*/
