@@ -965,6 +965,7 @@
 }
 .section__container--opinion {
   color: var(--color-brand-black);
+  content-visibility: auto;
 }
 
 .ti-widget {
@@ -983,6 +984,7 @@
   background-color: var(--color-primary-ligth);
   display: flex;
   flex-direction: column;
+  content-visibility: auto;
 }
 
 .contact__filter {
@@ -1012,7 +1014,7 @@
 }
 
 .contact__title {
-  background-image: url(../assets/images/image-form.jpg);
+  background-image: url(../assets/images/image-form.avif);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -1197,7 +1199,7 @@
 .fade-in {
   opacity: 0;
   transition: opacity 0.6s ease-in;
-  transition-delay: 0.8s;
+  transition-delay: 0.5s;
 }
 
 .fade-in.visible {
