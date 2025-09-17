@@ -1,578 +1,505 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="assets/images/logo.jpg"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="src/reset.css" />
-    <link rel="stylesheet" href="src/style.css" />
-    <title>Puro Ganado</title>
-  </head>
 
-  <body>
-    <!-- *******************************  MENU MOBILE / DESKTOP ************************** -->
-    <header id="header">
-      <!-- Menu mobile -->
-      <section class="menu-mobile">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="src/reset.css" />
+  <link rel="stylesheet" href="src/style.css" />
+  <title>Puro Ganado</title>
+</head>
+
+<body>
+  <!-- *******************************  BTN - WHATSAPP ************************** -->
+   <section class="btn__wsp">
+    <a href="https://wa.me/34600123456?text=Hola,%20me%20gustaria%20mas%20informacion" target="_blank">
+      <img src="assets/icons/icon-whatsapp.svg" alt="boton con imagen de Whatsapp ">
+    </a>
+   </section>
+  <!-- *******************************  MENU MOBILE / DESKTOP ************************** -->
+  <header id="header">
+    <!-- Menu mobile -->
+    <section class="menu-mobile">
+      <section class="menu-mobile__logo">
+        <img class="menu-mobile__image" src="assets/images/logo.avif" alt="imagen de logo" />
+        <article class="menu-mobile__brand">
+          <h5 class="menu-mobile__title">Puro Ganado</h5>
+          <h6 class="menu-mobile__subtitle">Carniceria</h6>
+        </article>
+      </section>
+      <section class="menu-mobile__btns">
+        <img class="menu-mobile__btn menu-mobile__btn--open" src="assets/icons/icon-menu-open.svg"
+          alt="icono para abrir menu movil" />
+        <img class="menu-mobile__btn menu-mobile__btn--close menu-mobile__btn--disabled"
+          src="assets/icons/icon-menu-close.svg" alt="icono para cerrar menu movil" />
+      </section>
+      <section class="menu-mobile__menu">
+        <section class="menu-mobile__navigation">
+          <nav class="menu-mobile__nav">
+            <a href="#header" class="menu-mobile__link">Inicio</a>
+            <a href="#about" class="menu-mobile__link">Nosotros</a>
+            <a href="#products" class="menu-mobile__link">Productos</a>
+            <a href="#contact" class="menu-mobile__link">Contacto</a>
+          </nav>
+          <section class="menu-mobile__social">
+            <a href="https://www.facebook.com/CarniceriaPuroGanado/" target="_blank"> <svg class="menu-mobile__btn"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#9a7678"
+                  d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+              </svg> </a>
+            <a href="https://www.instagram.com/carniceriapuroganado/?hl=es" target="_blank"><svg
+                class="menu-mobile__btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#9a7678"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg> </a>
+          </section>
+          <button class="menu-mobile__contact" type="button">
+            <a href="https://wa.me/34600123456?text=Hola,%20me%20gustaria%20mas%20informacion" target="_blank">
+            <img src="assets/icons/icon-whatsapp.svg" alt="Icono de WhatsApp" />Contáctanos
+            </a>
+          </button>
+        </section>
+      </section>
+    </section>
+    <!-- Menu desktop -->
+    <section class="menu-desktop">
+      <section class="menu-desktop__logo">
+        <img class="menu-desktop__image" src="assets/images/logo.avif" alt="Imagen de logo" />
+        <article class="menu-desktop__brand">
+          <h5 class="menu-desktop__title">Puro Ganado</h5>
+          <h6 class="menu-desktop__subtitle">Carniceria</h6>
+        </article>
+      </section>
+      <section class="menu-desktop__menu">
+        <nav class="menu-desktop__nav">
+          <a href="#header" class="menu-desktop__link">Inicio</a>
+          <a href="#about" class="menu-desktop__link">Nosotros</a>
+          <a href="#products" class="menu-desktop__link">Productos</a>
+          <a href="#contact" class="menu-desktop__link">Contacto</a>
+        </nav>
+        <section class="menu-desktop__social">
+          <a href="https://facebook.com/CarniceriaPuroGanado/" target="_blank"><svg class="menu-desktop__btn"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#9a7678"
+                d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+            </svg></a>
+          <svg class="menu-desktop__btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <a href="https://www.instagram.com/carniceriapuroganado/?hl=es" target="_blank">
+              <path fill="#9a7678"
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+          </svg></a>
+        </section>
+      </section>
+    </section>
+  </header>
+  <main>
+    <section class="response">
+      <section class="response__comment">
+        <img class="response__image" src="assets/images/logo.avif" alt="Imagen de logo" />
+        <p class="response__text">Gracias por tu comentario!</p>
+        <button class="response__btn">Volver</button>
+      </section>
+    </section>
+    <section class="home">
+      <section class="home__degraded">
+        <section class="home__info">
+          <h1 class="home__title">Puro Ganado</h1>
+          <h2 class="home__subtitle">carnicería argentina</h2>
+          <p class="home__description">Corte Argentino, sabor auténtico</p>
+          <img class="home__line" src="assets/images/home-line.svg" alt="Imagen de una linea" />
+          <a href="#contact">
+            <button class="home__btn" type="button">Contáctanos</button>
+          </a>
+        </section>
+      </section>
+    </section>
+    <!-- *******************************  SECTION ABOUT ************************** -->
+
+    <section class="section__container section__container--about">
+      <section id="about" class="section__container--title">
+        <hr class="section__container--line" />
+        <h2 class="section__container--text">Nosotros</h2>
+        <hr class="section__container--line" />
+      </section>
+      <section class="section__container--content">
+        <section class="about">
+          <img src="assets/images/image-about.jpg" alt="Imagen de cabecerade seccion nosotros"
+            class="about__image fade-in" />
+          <p class="about__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur earum magnam, debitis quaerat eius quas aliquam
+            aperiamquaerat eius quas aliquam aperiamquaerat eius quas aliquam
+            ape.<br />
+            riamquaerat eius quas aliquam aperiamquaerat eius quas aliquam
+            aperiamquaerat eius quas aliqu am aperiam quo delectus suscipit
+            nostrum aut blanditiis eos numquam quae doloremque nam in
+            rerum.<br />
+            riamquaerat eius quas aliquam aperiamquaerat eius quas aliquam
+            aperiamquaerat delectus suscipit nostrum aut blanditiis eos
+            numquam quae doloremque nam in rerum.
+          </p>
+        </section>
+      </section>
+    </section>
+
+    <!-- *******************************  SECTION REASONS ************************** -->
+
+    <section class="section__container section__container--reasons">
+      <section class="section__container--title">
+        <hr class="section__container--line" />
+        <h2 class="section__container--text">Razones que nos distinguen</h2>
+        <hr class="section__container--line" />
+      </section>
+      <section class="section__container--content section__container--content--reasons">
+        <section class="reasons">
+          <section class="reasons__card">
+            <img src="assets/images/reasons-image-1.png" alt="Imagen con logo de tienda"
+              class="reasons__image" />
+            <h3 class="reasons__title">Calidad y atención</h3>
+            <p class="reasons__text">
+              Ofrecemos productos cárnicos de primera calidad, una amplia
+              variedad y una atención al cliente personalizada.
+            </p>
+          </section>
+
+          <section class="reasons__card">
+            <img src="assets/images/reasons-image-2.png" alt="Imagen con bandera argentina referida a los cortes"
+              class="reasons__image" />
+            <h3 class="reasons__title">Corte argentino</h3>
+            <p class="reasons__text">
+              Ofrecemos productos cárnicos de primera calidad, una amplia
+              variedad y una atención al cliente personalizada.
+            </p>
+          </section>
+
+          <section class="reasons__card">
+            <img src="assets/images/reasons-image-3.png" alt="Imagen con slogan no es solo carne"
+              class="reasons__image" />
+            <h3 class="reasons__title">Esto no es solo carne</h3>
+            <p class="reasons__text">
+              Ofrecemos productos cárnicos de primera calidad, una amplia
+              variedad y una atención al cliente personalizada.
+            </p>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <!-- *******************************  SECTION MEATS ************************** -->
+
+    <section class="section__container section__container--meats">
+      <section id="products" class="section__container--title">
+        <hr class="section__container--line" />
+        <h2 class="section__container--text">Especialistas en carnes</h2>
+        <hr class="section__container--line" />
+      </section>
+      <section class="section__container--content">
+        <section class="meats">
+          <section class="meats__cards">
+            <section class="meats__card">
+              <img src="assets/icons/icon-section-beef.svg" alt="Icono de tarjeta vacuno" class="meats__card--img" />
+              <section class="meats__card--content">
+                <h3 class="meats__card--title">Ternera</h3>
+                <p class="meats__card--text">
+                  Cortes tiernos y jugosos, perfectos para guisos, plancha o
+                  asado. Sabor auténtico en cada bocado.
+                </p>
+              </section>
+            </section>
+
+            <section class="meats__card">
+              <img src="assets/icons/icon-section-pig.svg" alt="Icono de tarjeta cerdo" class="meats__card--img" />
+              <section class="meats__card--content">
+                <h3 class="meats__card--title">Cerdo</h3>
+                <p class="meats__card--text">
+                  Carne sabrosa y versátil. Ideal para cocinar al horno, a la
+                  parrilla o saltear con tu toque personal.
+                </p>
+              </section>
+            </section>
+
+            <section class="meats__card">
+              <img src="assets/icons/icon-section-farm.svg" alt="Icono de tarjeta granja" class="meats__card--img" />
+              <section class="meats__card--content">
+                <h3 class="meats__card--title">Granja</h3>
+                <p class="meats__card--text">
+                  Pollo y otras carnes blancas de calidad. Ligeras, nutritivas
+                  y listas para tu receta favorita.
+                </p>
+              </section>
+            </section>
+
+            <section class="meats__card">
+              <img src="assets/icons/icon-section-sausage.svg" alt="Icono de tarjeta embutido"
+                class="meats__card--img" />
+              <section class="meats__card--content">
+                <h3 class="meats__card--title">Embutidos</h3>
+                <p class="meats__card--text">
+                  Chorizos, morcillas y más, hechos con tradición. Perfectos
+                  para picar, compartir o llevar al fuego.
+                </p>
+              </section>
+            </section>
+
+            <section class="meats__card">
+              <img src="assets/icons/icon-section-grill.svg" alt="Icono de tarjeta parrilla" class="meats__card--img" />
+              <section class="meats__card--content">
+                <h3 class="meats__card--title">Parrilla</h3>
+                <p class="meats__card--text">
+                  Cortes argentinos pensados para el fuego. Jugosos, intensos
+                  y perfectos para asar y compartir.
+                </p>
+              </section>
+            </section>
+
+            <section class="meats__card">
+              <img src="assets/icons/icon-section-premium.svg" alt="Icono de tarjeta premium"
+                class="meats__card--img" />
+              <section class="meats__card--content">
+                <h3 class="meats__card--title">Cortes Premium</h3>
+                <p class="meats__card--text">
+                  Selección de cortes nobles, tiernos y sabrosos. Para los que
+                  disfrutan la carne en su mejor versión.
+                </p>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <!-- *******************************  SECTION PRODUCTS ************************** -->
+
+    <section class="section__container section__container--products">
+      <section class="section__container--title">
+        <hr class="section__container--line" />
+        <h2 class="section__container--text">Nuestros productos</h2>
+        <hr class="section__container--line" />
+      </section>
+      <section class="section__container--content">
+        <section class="products">
+          <section class="products__wraps">
+            <section class="products__cards">
+              <img src="assets/images/image-product-1.jpg" alt="Galletas dulces, Imagen de seccion productos"
+                class="products__image" />
+              <section class="products__card">
+                <h3 class="products__card--title">Galletitas</h3>
+                <h4 class="products__card--subtitle">Los mejores dulces</h4>
+                <hr class="products__card--line" />
+                <p class="products__card--text">
+                  Las mejores galletitas dulces argentinas a un paso de vos
+                </p>
+              </section>
+              <section class="products__card">
+                <h3 class="products__card--title">Galletitas</h3>
+                <h4 class="products__card--subtitle">Los mejores dulces</h4>
+                <hr class="products__card--line" />
+                <p class="products__card--text">
+                  Las mejores galletitas dulces argentinas a un paso de vos
+                </p>
+              </section>
+              <img src="assets/images/image-product-2.jpg" alt="Termos, Imagen de seccion productos"
+                class="products__image" />
+            </section>
+            <section class="products__cards">
+              <img src="assets/images/image-product-3.jpg" alt="Yerbas mates, Imagen de seccion productos"
+                class="products__image" />
+              <section class="products__card">
+                <h3 class="products__card--title">Galletitas</h3>
+                <h4 class="products__card--subtitle">Los mejores dulces</h4>
+                <hr class="products__card--line" />
+                <p class="products__card--text">
+                  Las mejores galletitas dulces argentinas a un paso de vos
+                </p>
+              </section>
+              <section class="products__card">
+                <h3 class="products__card--title">Galletitas</h3>
+                <h4 class="products__card--subtitle">Los mejores dulces</h4>
+                <hr class="products__card--line" />
+                <p class="products__card--text">
+                  Las mejores galletitas dulces argentinas a un paso de vos
+                </p>
+              </section>
+              <img src="assets/images/image-product-4.jpg" alt="Vinos, Imagen de seccion productos"
+                class="products__image" />
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <!-- *******************************  SECTION SERVICE ************************** -->
+
+    <section class="section__container section__container--service">
+      <section class="section__container--title">
+        <hr class="section__container--line" />
+        <h2 class="section__container--text">Servicios</h2>
+        <hr class="section__container--line" />
+      </section>
+      <section class="section__container--content">
+        <section class="service">
+          <img src="assets/images/image-service.jpg" alt="Imagen de cabecera de la seccion servicios"
+            class="service__image fade-in" />
+          <section class="service__cards">
+            <section class="service__card">
+              <img src="assets/icons/icon-service-delivery.svg" alt="Icono de la seccion servicios, reparto" />
+              <h3 class="service__title">Reparto a domicilio</h3>
+              <p class="service__text">
+                Nuestro servicio de reparto a domicilio garantiza calidad y
+                sabor en cada entrega. ¡Haz tu pedido y saborea la diferencia!
+              </p>
+            </section>
+
+            <section class="service__card">
+              <img src="assets/icons/icon-service-restaurant.svg"
+                alt="Icono de la seccion servicios, venta a restaurantes" />
+              <h3 class="service__title">Venta a restaurantes</h3>
+              <p class="service__text">
+                Nuestro servicio de reparto a domicilio garantiza calidad y
+                sabor en cada entrega. ¡Haz tu pedido y saborea la diferencia!
+              </p>
+            </section>
+
+            <section class="service__card">
+              <img src="assets/icons/icon-service-takeaway.svg"
+                alt="Icono de la seccion servicios, retiro de pedido en tienda" />
+              <h3 class="service__title">Retiro en tienda</h3>
+              <p class="service__text">
+                Haz tu pedido y recógelo cuando quieras. Sin esperas, sin
+                filas. Rápido y a tu ritmo.
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <!-- *******************************  SECTION OPINION ************************** -->
+
+    <section class="section__container section__container--opinion">
+      <section class="section__container--title">
+        <hr class="section__container--line" />
+        <h2 class="section__container--text">
+          Lo que dicen nuestros clientes
+        </h2>
+        <hr class="section__container--line" />
+      </section>
+      <section class="section__container--content">
+        <p class="opinion__text">
+          Nos llena de orgullo contar con la confianza de quienes eligen
+          nuestros productos.
+        </p>
+        <script defer async src='https://cdn.trustindex.io/loader.js?34f25c2540e81903ce2688c957d'></script>
+      </section>
+    </section>
+
+    <!-- *******************************  SECTION CONTACT ************************** -->
+
+    <section id="contact" class="contact">
+      <section class="contact__title">
+        <section class="contact__filter">
+          <hr class="contact__line" />
+          <h2 class="contact__text">
+            ¿Consulta, sugerencia o algo que contarnos?
+          </h2>
+          <hr class="contact__line" />
+          <p class="contact__subtitle">En puro ganado valoramos tu opinion</p>
+        </section>
+      </section>
+      <section class="contact__form">
+        <form class="form__contact" action="https://formsubmit.co/pablozallio@gmail.com" method="POST" target="_blank">
+          <label for="name">Nombre</label>
+          <input class="form__input" name="nombre" type="text" id="name"
+            title="Solo acepta letras mayusculas, minusculas y espacios" placeholder="Ingresa tu nombre"
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required autocomplete="name" />
+
+          <label for="lastname">Apellido</label>
+          <input class="form__input" name="apellido" type="text" id="lastname"
+            title="Solo acepta letras mayusculas, minusculas y espacios" placeholder="Ingresa tu apellido"
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required autocomplete="family-name" />
+
+          <label for="email">Email</label>
+          <input class="form__input" name="correo" type="email" id="email" title="Email incorrecto"
+            placeholder="Ingresa tu email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9]+-*[a-z0-9]+\.[a-z]{2,15}$"
+            required autocomplete="email" />
+
+          <textarea name="mensaje" required cols="30" rows="8" data-pattern="^.{1,255}$"
+            title="Tu comentario no debe exceder los 255 caracteres"
+            placeholder="Escribenos tus comentarios"></textarea>
+
+          <section class="form__check">
+            <input class="form__checkbox" type="checkbox" name="" id="checkbox" />
+            <label for="checkbox" class="form__accept">*He leído y acepto la
+              <a href="src/privacy.html">Política de Privacidad</a></label>
+          </section>
+          <input class="form__button" type="submit" value="Enviar" />
+        </form>
+      </section>
+    </section>
+
+    <!-- *******************************  SECTION LOCATION ************************** -->
+
+    <section class="location">
+      <section class="location__map">
+        <iframe class="location__map--link"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6163.158579799857!2d-0.47698979999999996!3d39.433637000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6051c0de6c5109%3A0xba688b692d1f13cd!2sCarnicer%C3%ADa%20Puro%20Ganado!5e0!3m2!1ses!2ses!4v1757669586907!5m2!1ses!2ses"
+          width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+      <section class="location__data">
+        <section class="location__days">
+          <h3 class="location__titles">Horario de atencion:</h3>
+          <ul class="location__info">MAÑANAS - Lunes a sabado: 9:00hs a 14:00 hs</ul>
+          <ul class="location__info">TARDES - Viernes: 17:00hs a 20:30hs</ul>
+        </section>
+        <section class="location__address">
+          <h3 class="location__titles">Direccion:</h3>
+          <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd6051c0de6c5109:0xba688b692d1f13cd?sa=X&ved=1t:8290&ictx=111"
+            class="location__info location__info--link location__info--icon" target="_blank">San Valeriano 30 bajo,
+            Torrente, Valenciana, España 46900</a>
+        </section>
+        <section class="location__phone">
+          <h3 class="location__titles">Telefonos:</h3>
+          <p class="location__info location__fixed">Fijo: 960 51 36 86</p>
+          <p class="location__info location__mobile">Movil: 622 67 13 07</p>
+        </section>
+      </section>
+    </section>
+
+    <!-- *******************************  SECTION FOOTER ************************** -->
+    <footer class="footer">
+      <section class="footer__logo">
         <section class="menu-mobile__logo">
-          <img
-            class="menu-mobile__image"
-            src="assets/images/logo.avif"
-            alt="imagen de logo"
-          />
+          <img class="menu-mobile__image" src="assets/images/logo.avif" alt="imagen de logo" />
           <article class="menu-mobile__brand">
             <h5 class="menu-mobile__title">Puro Ganado</h5>
             <h6 class="menu-mobile__subtitle">Carniceria</h6>
           </article>
         </section>
-        <section class="menu-mobile__btns">
-          <img
-            class="menu-mobile__btn menu-mobile__btn--open"
-            src="assets/icons/icon-menu-open.svg"
-            alt="icono para abrir menu movil"
-          />
-          <img
-            class="menu-mobile__btn menu-mobile__btn--close menu-mobile__btn--disabled"
-            src="assets/icons/icon-menu-close.svg"
-            alt="icono para cerrar menu movil"
-          />
-        </section>
-        <section class="menu-mobile__menu">
-          <section class="menu-mobile__navigation">
-            <nav class="menu-mobile__nav">
-              <a href="#header" class="menu-mobile__link">Inicio</a>
-              <a href="#about" class="menu-mobile__link">Nosotros</a>
-              <a href="#products" class="menu-mobile__link">Productos</a>
-              <a href="#contact" class="menu-mobile__link">Contacto</a>
-            </nav>
-            <section class="menu-mobile__social">
-              <svg
-                class="menu-mobile__btn"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="#9a7678"
-                  d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
-                />
-              </svg>
-              <svg
-                class="menu-mobile__btn"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="#9a7678"
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                />
-              </svg>
-            </section>
-            <button class="menu-mobile__contact" type="button">
-              <img src="assets/icons/icon-whatsapp.svg" alt="Icono de WhatsApp" />Contáctanos
-            </button>
+        <section class="menu-mobile__social menu-mobile__social--footer">
+            <a href="https://www.facebook.com/CarniceriaPuroGanado/" target="_blank"> <svg class="menu-mobile__btn"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#9a7678"
+                  d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+              </svg> </a>
+            <a href="https://www.instagram.com/carniceriapuroganado/?hl=es" target="_blank"><svg
+                class="menu-mobile__btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#9a7678"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg> </a>
           </section>
-        </section>
       </section>
-      <!-- Menu desktop -->
-      <section class="menu-desktop">
-        <section class="menu-desktop__logo">
-          <img
-            class="menu-desktop__image"
-            src="assets/images/logo.avif"
-            alt="Imagen de logo"
-          />
-          <article class="menu-desktop__brand">
-            <h5 class="menu-desktop__title">Puro Ganado</h5>
-            <h6 class="menu-desktop__subtitle">Carniceria</h6>
-          </article>
-        </section>
-        <section class="menu-desktop__menu">
-          <nav class="menu-desktop__nav">
-            <a href="#header" class="menu-desktop__link">Inicio</a>
-            <a href="#about" class="menu-desktop__link">Nosotros</a>
-            <a href="#products" class="menu-desktop__link">Productos</a>
-            <a href="#contact" class="menu-desktop__link">Contacto</a>
-          </nav>
-          <section class="menu-desktop__social">
-            <a href="https://facebook.com/CarniceriaPuroGanado/" target="_blank"
-              ><svg
-                class="menu-desktop__btn"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="#9a7678"
-                  d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
-                /></svg
-            ></a>
-            <a
-              href="https://www.instagram.com/carniceriapuroganado/?hl=es"
-              target="_blank"
-              ><svg
-                class="menu-desktop__btn"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="#9a7678"
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                /></svg
-            ></a>
-          </section>
-        </section>
+      <section class="footer__links">
+        <a class="footer__link" href="src/privacy.html" target="_blank">Política de privaciad</a>
+        <a class="footer__link" href="src/warning.html" target="_blank">Aviso Legal</a>
       </section>
-    </header>
-    <main>
-      <section class="response">
-        <section class="response__comment">
-          <img class="response__image" src="assets/images/logo.avif" alt="Imagen de logo" />
-          <p class="response__text">Gracias por tu comentario!</p>
-          <button class="response__btn">Volver</button>
-        </section>
-      </section>
-      <section class="home">
-        <section class="home__degraded">
-          <section class="home__info">
-            <h1 class="home__title">Puro Ganado</h1>
-            <h2 class="home__subtitle">carnicería argentina</h2>
-            <p class="home__description">Corte Argentino, sabor auténtico</p>
-            <img
-              class="home__line"
-              src="assets/images/home-line.svg"
-              alt="Imagen de una linea"
-            />
-            <a href="#contact">
-              <button class="home__btn" type="button">Contáctanos</button>
-            </a>
-          </section>
-        </section>
-      </section>
-      <!-- *******************************  SECTION ABOUT ************************** -->
+      <section class="footer__copyright">© 2025 Carnicería Puro Ganado. Todos los derechos reservados. Diseñada por <a href="#">Maca</a> y desarrollada por <a href="#">PabloZ DeV</a></section>
+    </footer>
+  </main>
+  <script src="src/script.js"></script>
+</body>
 
-      <section class="section__container section__container--about">
-        <section id="about" class="section__container--title">
-          <hr class="section__container--line" />
-          <h2 class="section__container--text">Nosotros</h2>
-          <hr class="section__container--line" />
-        </section>
-        <section class="section__container--content">
-          <section class="about">
-            <img
-              src="assets/images/image-about.jpg"
-              alt="Imagen de cabecerade seccion nosotros"
-              class="about__image fade-in"
-            />
-            <p class="about__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur earum magnam, debitis quaerat eius quas aliquam
-              aperiamquaerat eius quas aliquam aperiamquaerat eius quas aliquam
-              ape.<br />
-              riamquaerat eius quas aliquam aperiamquaerat eius quas aliquam
-              aperiamquaerat eius quas aliqu am aperiam quo delectus suscipit
-              nostrum aut blanditiis eos numquam quae doloremque nam in
-              rerum.<br />
-              riamquaerat eius quas aliquam aperiamquaerat eius quas aliquam
-              aperiamquaerat delectus suscipit nostrum aut blanditiis eos
-              numquam quae doloremque nam in rerum.
-            </p>
-          </section>
-        </section>
-      </section>
-
-      <!-- *******************************  SECTION REASONS ************************** -->
-
-      <section class="section__container section__container--reasons">
-        <section class="section__container--title">
-          <hr class="section__container--line" />
-          <h2 class="section__container--text">Razones que nos distinguen</h2>
-          <hr class="section__container--line" />
-        </section>
-        <section
-          class="section__container--content section__container--content--reasons"
-        >
-          <section class="reasons">
-            <section class="reasons__card">
-              <img
-                src="assets/images/reasons-image-1.png"
-                alt="Imagen de terjeta de seccion razones que nos distinguen"
-                class="reasons__image"
-              />
-              <h3 class="reasons__title">Calidad y atención</h3>
-              <p class="reasons__text">
-                Ofrecemos productos cárnicos de primera calidad, una amplia
-                variedad y una atención al cliente personalizada.
-              </p>
-            </section>
-
-            <section class="reasons__card">
-              <img
-                src="assets/images/reasons-image-2.png"
-                alt="Imagen de terjeta de seccion razones que nos distinguen"
-                class="reasons__image"
-              />
-              <h3 class="reasons__title">Corte argentino</h3>
-              <p class="reasons__text">
-                Ofrecemos productos cárnicos de primera calidad, una amplia
-                variedad y una atención al cliente personalizada.
-              </p>
-            </section>
-
-            <section class="reasons__card">
-              <img
-                src="assets/images/reasons-image-3.png"
-                alt="Imagen de terjeta de seccion razones que nos distinguen"
-                class="reasons__image"
-              />
-              <h3 class="reasons__title">Esto no es solo carne</h3>
-              <p class="reasons__text">
-                Ofrecemos productos cárnicos de primera calidad, una amplia
-                variedad y una atención al cliente personalizada.
-              </p>
-            </section>
-          </section>
-        </section>
-      </section>
-
-      <!-- *******************************  SECTION MEATS ************************** -->
-
-      <section class="section__container section__container--meats">
-        <section id="products" class="section__container--title">
-          <hr class="section__container--line" />
-          <h2 class="section__container--text">Especialistas en carnes</h2>
-          <hr class="section__container--line" />
-        </section>
-        <section class="section__container--content">
-          <section class="meats">
-            <section class="meats__cards">
-              <section class="meats__card">
-                <img
-                  src="assets/icons/icon-section-beef.svg"
-                  alt="Icono de tarjeta vacuno"
-                  class="meats__card--img"
-                />
-                <section class="meats__card--content">
-                  <h3 class="meats__card--title">Ternera</h3>
-                  <p class="meats__card--text">
-                    Cortes tiernos y jugosos, perfectos para guisos, plancha o
-                    asado. Sabor auténtico en cada bocado.
-                  </p>
-                </section>
-              </section>
-
-              <section class="meats__card">
-                <img
-                  src="assets/icons/icon-section-pig.svg"
-                  alt="Icono de tarjeta cerdo"
-                  class="meats__card--img"
-                />
-                <section class="meats__card--content">
-                  <h3 class="meats__card--title">Cerdo</h3>
-                  <p class="meats__card--text">
-                    Carne sabrosa y versátil. Ideal para cocinar al horno, a la
-                    parrilla o saltear con tu toque personal.
-                  </p>
-                </section>
-              </section>
-
-              <section class="meats__card">
-                <img
-                  src="assets/icons/icon-section-farm.svg"
-                  alt="Icono de tarjeta granja"
-                  class="meats__card--img"
-                />
-                <section class="meats__card--content">
-                  <h3 class="meats__card--title">Granja</h3>
-                  <p class="meats__card--text">
-                    Pollo y otras carnes blancas de calidad. Ligeras, nutritivas
-                    y listas para tu receta favorita.
-                  </p>
-                </section>
-              </section>
-
-              <section class="meats__card">
-                <img
-                  src="assets/icons/icon-section-sausage.svg"
-                  alt="Icono de tarjeta embutido"
-                  class="meats__card--img"
-                />
-                <section class="meats__card--content">
-                  <h3 class="meats__card--title">Embutidos</h3>
-                  <p class="meats__card--text">
-                    Chorizos, morcillas y más, hechos con tradición. Perfectos
-                    para picar, compartir o llevar al fuego.
-                  </p>
-                </section>
-              </section>
-
-              <section class="meats__card">
-                <img
-                  src="assets/icons/icon-section-grill.svg"
-                  alt="Icono de tarjeta parrilla"
-                  class="meats__card--img"
-                />
-                <section class="meats__card--content">
-                  <h3 class="meats__card--title">Parrilla</h3>
-                  <p class="meats__card--text">
-                    Cortes argentinos pensados para el fuego. Jugosos, intensos
-                    y perfectos para asar y compartir.
-                  </p>
-                </section>
-              </section>
-
-              <section class="meats__card">
-                <img
-                  src="assets/icons/icon-section-premium.svg"
-                  alt="Icono de tarjeta premium"
-                  class="meats__card--img"
-                />
-                <section class="meats__card--content">
-                  <h3 class="meats__card--title">Cortes Premium</h3>
-                  <p class="meats__card--text">
-                    Selección de cortes nobles, tiernos y sabrosos. Para los que
-                    disfrutan la carne en su mejor versión.
-                  </p>
-                </section>
-              </section>
-            </section>
-          </section>
-        </section>
-      </section>
-
-      <!-- *******************************  SECTION PRODUCTS ************************** -->
-
-      <section class="section__container section__container--products">
-        <section class="section__container--title">
-          <hr class="section__container--line" />
-          <h2 class="section__container--text">Nuestros productos</h2>
-          <hr class="section__container--line" />
-        </section>
-        <section class="section__container--content">
-          <section class="products">
-            <section class="products__wraps">
-              <section class="products__cards">
-                <img
-                  src="assets/images/image-product-1.jpg"
-                  alt="Galletas dulces, Imagen de seccion productos"
-                  class="products__image"
-                />
-                <section class="products__card">
-                  <h3 class="products__card--title">Galletitas</h3>
-                  <h6 class="products__card--subtitle">Los mejores dulces</h6>
-                  <hr class="products__card--line" />
-                  <p class="products__card--text">
-                    Las mejores galletitas dulces argentinas a un paso de vos
-                  </p>
-                </section>
-                <section class="products__card">
-                  <h3 class="products__card--title">Galletitas</h3>
-                  <h6 class="products__card--subtitle">Los mejores dulces</h6>
-                  <hr class="products__card--line" />
-                  <p class="products__card--text">
-                    Las mejores galletitas dulces argentinas a un paso de vos
-                  </p>
-                </section>
-                <img
-                  src="assets/images/image-product-2.jpg"
-                  alt="Termos, Imagen de seccion productos"
-                  class="products__image"
-                />
-              </section>
-              <section class="products__cards">
-                <img
-                  src="assets/images/image-product-3.jpg"
-                  alt="Yerbas mates, Imagen de seccion productos"
-                  class="products__image"
-                />
-                <section class="products__card">
-                  <h3 class="products__card--title">Galletitas</h3>
-                  <h6 class="products__card--subtitle">Los mejores dulces</h6>
-                  <hr class="products__card--line" />
-                  <p class="products__card--text">
-                    Las mejores galletitas dulces argentinas a un paso de vos
-                  </p>
-                </section>
-                <section class="products__card">
-                  <h3 class="products__card--title">Galletitas</h3>
-                  <h6 class="products__card--subtitle">Los mejores dulces</h6>
-                  <hr class="products__card--line" />
-                  <p class="products__card--text">
-                    Las mejores galletitas dulces argentinas a un paso de vos
-                  </p>
-                </section>
-                <img
-                  src="assets/images/image-product-4.jpg"
-                  alt="Vinos, Imagen de seccion productos"
-                  class="products__image"
-                />
-              </section>
-            </section>
-          </section>
-        </section>
-      </section>
-
-      <!-- *******************************  SECTION SERVICE ************************** -->
-
-      <section class="section__container section__container--service">
-        <section class="section__container--title">
-          <hr class="section__container--line" />
-          <h2 class="section__container--text">Servicios</h2>
-          <hr class="section__container--line" />
-        </section>
-        <section class="section__container--content">
-          <section class="service">
-            <img
-              src="assets/images/image-service.jpg"
-              alt="Imagen de cabecera de la seccion servicios"
-              class="service__image fade-in"
-            />
-            <section class="service__cards">
-              <section class="service__card">
-                <img src="assets/icons/icon-service-delivery.svg" alt="Icono de la seccion servicios, reparto" />
-                <h3 class="service__title">Reparto a domicilio</h3>
-                <p class="service__text">
-                  Nuestro servicio de reparto a domicilio garantiza calidad y
-                  sabor en cada entrega. ¡Haz tu pedido y saborea la diferencia!
-                </p>
-              </section>
-
-              <section class="service__card">
-                <img src="assets/icons/icon-service-restaurant.svg" alt="Icono de la seccion servicios, venta a restaurantes" />
-                <h3 class="service__title">Venta a restaurantes</h3>
-                <p class="service__text">
-                  Nuestro servicio de reparto a domicilio garantiza calidad y
-                  sabor en cada entrega. ¡Haz tu pedido y saborea la diferencia!
-                </p>
-              </section>
-
-              <section class="service__card">
-                <img src="assets/icons/icon-service-takeaway.svg" alt="Icono de la seccion servicios, retiro de pedido en tienda" />
-                <h3 class="service__title">Retiro en tienda</h3>
-                <p class="service__text">
-                  Haz tu pedido y recógelo cuando quieras. Sin esperas, sin
-                  filas. Rápido y a tu ritmo.
-                </p>
-              </section>
-            </section>
-          </section>
-        </section>
-      </section>
-
-      <!-- *******************************  SECTION OPINION ************************** -->
-
-      <section class="section__container section__container--opinion">
-        <section class="section__container--title">
-          <hr class="section__container--line" />
-          <h2 class="section__container--text">
-            Lo que dicen nuestros clientes
-          </h2>
-          <hr class="section__container--line" />
-        </section>
-        <section class="section__container--content">
-          <p class="opinion__text">
-            Nos llena de orgullo contar con la confianza de quienes eligen
-            nuestros productos.
-          </p>
-          <script
-            defer
-            async
-            src="https://cdn.trustindex.io/loader.js?5974fec53b27700c0d8664f1272"
-          ></script>
-        </section>
-      </section>
-
-      <!-- *******************************  SECTION CONTACT ************************** -->
-
-      <section id="contact" class="contact">
-        <section class="contact__title">
-          <section class="contact__filter">
-            <hr class="contact__line" />
-            <h2 class="contact__text">
-              ¿Consulta, sugerencia o algo que contarnos?
-            </h2>
-            <hr class="contact__line" />
-            <p class="contact__subtitle">En puro ganado valoramos tu opinion</p>
-          </section>
-        </section>
-        <section class="contact__form">
-          <form
-            class="form__contact"
-            action="https://formsubmit.co/pablozallio@gmail.com"
-            method="POST"
-            target="_blank"
-          >
-            <label for="name">Nombre</label>
-            <input
-              class="form__input"
-              name="nombre"
-              type="text"
-              id="name"
-              title="Solo acepta letras mayusculas, minusculas y espacios"
-              placeholder="Ingresa tu nombre"
-              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-              required
-              autocomplete="name"
-            />
-
-            <label for="lastname">Apellido</label>
-            <input
-              class="form__input"
-              name="apellido"
-              type="text"
-              id="lastname"
-              title="Solo acepta letras mayusculas, minusculas y espacios"
-              placeholder="Ingresa tu apellido"
-              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-              required
-              autocomplete="family-name"
-            />
-
-            <label for="email">Email</label>
-            <input
-              class="form__input"
-              name="correo"
-              type="email"
-              id="email"
-              title="Email incorrecto"
-              placeholder="Ingresa tu email"
-              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9]+-*[a-z0-9]+\.[a-z]{2,15}$"
-              required
-              autocomplete="email"
-            />
-
-            <textarea
-              name="mensaje"
-              required
-              cols="30"
-              rows="8"
-              data-pattern="^.{1,255}$"
-              title="Tu comentario no debe exceder los 255 caracteres"
-              placeholder="Escribenos tus comentarios"
-            ></textarea>
-
-            <section class="form__check">
-              <input
-                class="form__checkbox"
-                type="checkbox"
-                name=""
-                id="checkbox"
-              />
-              <label for="checkbox" class="form__accept"
-                >*He leído y acepto la
-                <a href="">Política de Privacidad</a></label
-              >
-            </section>
-            <input class="form__button" type="submit" value="Enviar" />
-          </form>
-        </section>
-      </section>
-    </main>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <script src="src/script.js"></script>
-  </body>
 </html>
 
 <!-- 
