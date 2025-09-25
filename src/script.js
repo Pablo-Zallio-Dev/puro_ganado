@@ -74,10 +74,10 @@ function validationForm() {
   });
 
   d.addEventListener("submit", (e) => {
+    e.preventDefault()
     if ($checkbox.checked) {
-      console.log("Enviar");
       $response.style.display = "flex";
-
+      $form.submit()
       setTimeout(() => {
         $form.reset();
       }, 2000);
