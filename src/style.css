@@ -721,6 +721,12 @@ box-shadow: 0px 7px 14px -8px var(--color-secondary-darkBlue-60);
   border: 1px solid var(--color-secondary-stroke);
   box-shadow: 4px 3px 13px -2px var(--color-secondary-stroke);
   transition: transform 0.1s ease-in;
+  background-color: var(--color-secondary-grey);
+}
+
+.meats__card img {
+  width: 5rem;
+  height: auto;
 }
 
 .meats__card--text {
@@ -746,7 +752,7 @@ box-shadow: 0px 7px 14px -8px var(--color-secondary-darkBlue-60);
 }
 
 .section__container--meats {
-  background-color: var(--color-primary-ligth);
+ background-image: url(../assets/images/bg-meats.webp);
   color: var(--color-brand-black);
 }
 
@@ -761,9 +767,12 @@ box-shadow: 0px 7px 14px -8px var(--color-secondary-darkBlue-60);
   .meats__card:hover {
     transform: scale(1.03);
   }
-  .meats__card--img {
-    width: 10rem;
-  }
+
+  .meats__card img {
+  width: 7rem;
+  height: auto;
+}
+
 
   .meats__card--text {
     font-size: 1rem;
@@ -1005,6 +1014,7 @@ box-shadow: 0px 7px 14px -8px var(--color-secondary-darkBlue-60);
 .section__container--opinion {
   color: var(--color-brand-black);
   content-visibility: auto;
+  font-family: var(--font-open);
 }
 
 .ti-widget {
